@@ -1,6 +1,7 @@
 package dev.xkmc.l2complements.init;
 
 import com.tterrag.registrate.providers.ProviderType;
+import dev.xkmc.l2complements.content.item.wand.WandEffectToClient;
 import dev.xkmc.l2complements.events.L2ComplementsClick;
 import dev.xkmc.l2complements.events.LCAttackListener;
 import dev.xkmc.l2complements.init.data.*;
@@ -29,6 +30,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static dev.xkmc.l2serial.network.PacketHandler.NetDir.PLAY_TO_CLIENT;
 import static dev.xkmc.l2serial.network.PacketHandler.NetDir.PLAY_TO_SERVER;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -38,9 +40,10 @@ public class L2Complements {
 
 	public static final String MODID = "l2complements";
 	public static final PacketHandlerWithConfig HANDLER = new PacketHandlerWithConfig(
-			MODID, 3,
+			MODID, 4,
 			e -> e.create(EmptyRightClickToServer.class, PLAY_TO_SERVER),
-			e -> e.create(RotateDiggerToServer.class, PLAY_TO_SERVER)
+			e -> e.create(RotateDiggerToServer.class, PLAY_TO_SERVER),
+			e -> e.create(WandEffectToClient.class, PLAY_TO_CLIENT)
 	);
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final Reg REG = new Reg(MODID);

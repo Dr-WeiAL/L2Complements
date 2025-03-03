@@ -180,7 +180,7 @@ public class LCConfig {
 
 				sonicShooterDamage = builder.text("Sonic Shooter Damage")
 						.defineInRange("sonicShooterDamage", 10, 1, 1000);
-				hellfireWandDamage = builder.text("Hellfire Wand Damage")
+				hellfireWandDamage = builder.text("Hellfire Wand Damage per second charged (max 3 seconds charged)")
 						.defineInRange("hellfireWandDamage", 10, 1, 1000);
 
 			}

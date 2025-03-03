@@ -50,40 +50,41 @@ public class SonicShooter extends WandItem implements IGlowingTarget {
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity user) {
-		if (level instanceof ServerLevel sl) {
-			int size = 1;
+		if (level instanceof ServerLevel sl && user instanceof Player) {
 			Vec3 src = user.getEyePosition();
 			Vec3 dst = RayTraceUtil.getRayTerm(src, user.getXRot(), user.getYRot(), RANGE);
 			Vec3 dir = dst.subtract(src).normalize();
+			shoot(sl, user, stack, src, dir);
+		}
+		return stack;
+	}
 
-			for (int i = 1; i < RANGE; ++i) {
-				Vec3 vec33 = src.add(dir.scale(i));
-				sl.sendParticles(ParticleTypes.SONIC_BOOM, vec33.x, vec33.y, vec33.z, 1, 0.0D, 0.0D, 0.0D, 0.0D);
-			}
-
-			List<LivingEntity> target = new ArrayList<>();
-			AABB aabb = new AABB(src, src.add(dir.scale(RANGE)));
-			for (var e : level.getEntities(user, aabb)) {
-				if (e instanceof LivingEntity x) {
-					AABB box = x.getBoundingBox().inflate(size);
-					for (int i = 0; i <= RANGE; i++) {
-						if (box.contains(src.add(dir.scale(i)))) {
-							target.add(x);
-							break;
-						}
+	public static void shoot(ServerLevel level, LivingEntity user, ItemStack stack, Vec3 src, Vec3 dir) {
+		for (int i = 1; i < RANGE; ++i) {
+			Vec3 vec33 = src.add(dir.scale(i));
+			level.sendParticles(ParticleTypes.SONIC_BOOM, vec33.x, vec33.y, vec33.z, 1, 0, 0.0D, 0.0D, 0.0D);
+		}
+		List<LivingEntity> target = new ArrayList<>();
+		AABB aabb = new AABB(src, src.add(dir.scale(RANGE)));
+		for (var e : level.getEntities(user, aabb)) {
+			if (e instanceof LivingEntity x) {
+				AABB box = x.getBoundingBox().inflate(1);
+				for (int i = 0; i <= RANGE; i++) {
+					if (box.contains(src.add(dir.scale(i)))) {
+						target.add(x);
+						break;
 					}
 				}
 			}
-			for (var e : target) {
-				e.hurt(sl.damageSources().sonicBoom(user), LCConfig.SERVER.sonicShooterDamage.get());
-				double d1 = 0.5D * (1.0D - e.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-				double d0 = 2.5D * (1.0D - e.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-				e.push(dir.x() * d0, dir.y() * d1, dir.z() * d0);
-			}
+		}
+		for (var e : target) {
+			e.hurt(level.damageSources().sonicBoom(user), LCConfig.SERVER.sonicShooterDamage.get());
+			double d1 = 0.5D * (1.0D - e.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+			double d0 = 2.5D * (1.0D - e.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+			e.push(dir.x() * d0, dir.y() * d1, dir.z() * d0);
 		}
 		user.playSound(SoundEvents.WARDEN_SONIC_BOOM, 3.0F, 1.0F);
 		stack.hurtAndBreak(1, user, LivingEntity.getSlotForHand(user.getUsedItemHand()));
-		return stack;
 	}
 
 	@Override
