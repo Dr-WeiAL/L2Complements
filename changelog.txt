@@ -1,3 +1,6 @@
+3.0.10
+- Fix crash with mods that bypass neoforge damage pipeline
+
 3.0.9
 - Prepare compat for MobWeaponAPI
 
