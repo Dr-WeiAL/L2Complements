@@ -73,13 +73,6 @@ public class L2Complements {
 		DamageTypeGen.register();
 		new L2ComplementsClick(new ResourceLocation(MODID, "main"));
 		AttackEventHandler.register(5000, new MaterialDamageListener());
-		REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::addTranslations);
-		REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeGen::genRecipe);
-		REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, TagGen::onBlockTagGen);
-		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, TagGen::onItemTagGen);
-		REGISTRATE.addDataGenerator(ProviderType.ENTITY_TAGS, TagGen::onEntityTagGen);
-		REGISTRATE.addDataGenerator(TagGen.EFF_TAGS, TagGen::onEffectTagGen);
-		REGISTRATE.addDataGenerator(TagGen.ENCH_TAGS, TagGen::onEnchTagGen);
 	}
 
 	@SubscribeEvent
@@ -97,6 +90,14 @@ public class L2Complements {
 
 	@SubscribeEvent(priority = EventPriority.HIGH)
 	public static void gatherData(GatherDataEvent event) {
+		REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::addTranslations);
+		REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeGen::genRecipe);
+		REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, TagGen::onBlockTagGen);
+		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, TagGen::onItemTagGen);
+		REGISTRATE.addDataGenerator(ProviderType.ENTITY_TAGS, TagGen::onEntityTagGen);
+		REGISTRATE.addDataGenerator(TagGen.EFF_TAGS, TagGen::onEffectTagGen);
+		REGISTRATE.addDataGenerator(TagGen.ENCH_TAGS, TagGen::onEnchTagGen);
+
 		boolean run = event.includeServer();
 		var gen = event.getGenerator();
 		PackOutput output = gen.getPackOutput();

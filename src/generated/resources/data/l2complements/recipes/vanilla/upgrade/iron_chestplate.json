@@ -19,5 +19,7 @@
   "result": {
     "item": "minecraft:iron_chestplate"
   },
-  "template": []
+  "template": {
+    "tag": "l2library:dummy_smithing_template"
+  }
 }

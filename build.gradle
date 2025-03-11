@@ -64,7 +64,7 @@ minecraft {
             property 'forge.logging.console.level', 'info'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', "${modid}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', "${modid}", '--existing-mod', 'tconstruct', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 "${modid}" {
@@ -237,6 +237,9 @@ dependencies {
 
     implementation fg.deobf("curse.maven:valhelsia-core-416935:5189548")
     implementation fg.deobf("curse.maven:forbidden-arcanus-309858:5198323")
+
+    implementation fg.deobf("curse.maven:mantle-74924:6105891")
+    implementation fg.deobf("curse.maven:tinkers-construct-74072:6111032")
 }
 
 tasks.register('publishCurseForge', TaskPublishCurseForge) {
