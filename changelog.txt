@@ -1,3 +1,6 @@
+2.5.3
+- Add smithing template for backpack upgrade
+
 2.5.2
 - Add support for ModularGolems to use wand items
 - Makes wand particle effects visible to other players
