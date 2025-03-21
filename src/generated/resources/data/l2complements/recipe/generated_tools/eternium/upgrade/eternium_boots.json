@@ -21,5 +21,7 @@
     "count": 1,
     "id": "l2complements:eternium_boots"
   },
-  "template": []
+  "template": {
+    "item": "minecraft:paper"
+  }
 }

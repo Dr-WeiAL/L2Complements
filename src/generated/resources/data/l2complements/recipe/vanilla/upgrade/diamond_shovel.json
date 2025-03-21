@@ -21,5 +21,7 @@
     "count": 1,
     "id": "minecraft:diamond_shovel"
   },
-  "template": []
+  "template": {
+    "item": "minecraft:paper"
+  }
 }

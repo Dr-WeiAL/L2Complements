@@ -347,7 +347,7 @@
   "l2complements.configuration.fire_charge": "Fire Charge",
   "l2complements.configuration.flameEnchantDuration": "Hell Fire Blade: effect duration in ticks",
   "l2complements.configuration.flameEnchantDuration.tooltip": "Range: 1 ~ 10000",
-  "l2complements.configuration.hellfireWandDamage": "Hellfire Wand Damage",
+  "l2complements.configuration.hellfireWandDamage": "Hellfire Wand Damage per second charged (max 3 seconds charged)",
   "l2complements.configuration.hellfireWandDamage.tooltip": "Range: 1 ~ 1000",
   "l2complements.configuration.iceEnchantDuration": "Freezing Blade: Base effect duration in ticks",
   "l2complements.configuration.iceEnchantDuration.tooltip": "Range: 1 ~ 10000",

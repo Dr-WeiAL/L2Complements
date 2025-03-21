@@ -10,5 +10,7 @@
     "count": 1,
     "id": "l2complements:reinforced_warp_stone"
   },
-  "template": []
+  "template": {
+    "item": "minecraft:paper"
+  }
 }
