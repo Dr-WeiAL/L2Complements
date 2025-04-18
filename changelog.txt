@@ -1,3 +1,6 @@
+2.5.5
+- Fix conflict between Iron Spell's Heartstop and L2Hostility's Drain
+
 2.5.4
 - fix Ender Hand enchantment in L2Weaponry
 
