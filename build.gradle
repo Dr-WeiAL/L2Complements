@@ -170,6 +170,7 @@ dependencies {
     implementation "dev.xkmc:l2itemselector:${l2itemselector_ver}"
     implementation "dev.xkmc:l2library:${l2library_ver}"
     runtimeOnly "dev.xkmc:l2weaponry:${l2weaponry_ver}"
+    runtimeOnly "dev.xkmc:modulargolems:${modulargolems_ver}"
 
     implementation jarJar(group: 'dev.xkmc', name: 'l2damagetracker', version: "[${l2damagetracker_ver},)")
 
