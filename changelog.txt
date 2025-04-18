@@ -1,5 +1,8 @@
+2.5.4
+- fix Ender Hand enchantment in L2Weaponry
+
 2.5.3
-- Add smithing template for backpack upgrade
+- Add smithing template for weapon material substitution recipes
 
 2.5.2
 - Add support for ModularGolems to use wand items
