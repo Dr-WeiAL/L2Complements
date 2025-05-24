@@ -1,3 +1,7 @@
+3.0.13
+- Make freezing thorn and hellfire thorn chest armor only
+- Change some enchantment implementation to prepare for Curse of Pandora
+
 3.0.12
 - Fix Ender Hand calculation from L2Weaponry
 

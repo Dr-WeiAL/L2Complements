@@ -194,13 +194,13 @@ public class LCEnchantments {
 					SharpBladeEnchantment::new);
 
 			FREEZING_THORN = REG.enchLegacy("freezing_thorn", "Freezing Thorn", "When attacked, apply %s to attacker.",
-					e -> e.items(ItemTags.ARMOR_ENCHANTABLE).group(EquipmentSlotGroup.ARMOR)
+					e -> e.items(ItemTags.CHEST_ARMOR_ENCHANTABLE).group(EquipmentSlotGroup.ARMOR)
 							.exclusive(LCTagGen.THORN).tags(LCTagGen.THORN).maxLevel(3)
 							.color(green).special(CRAFT, order.of(armor)),
 					FreezingThornEnchantment::new);
 
 			HELLFIRE_THORN = REG.enchLegacy("hellfire_thorn", "Hellfire Thorn", "When attacked, apply %s to attacker.",
-					e -> e.items(ItemTags.ARMOR_ENCHANTABLE).group(EquipmentSlotGroup.ARMOR)
+					e -> e.items(ItemTags.CHEST_ARMOR_ENCHANTABLE).group(EquipmentSlotGroup.ARMOR)
 							.exclusive(LCTagGen.THORN).tags(LCTagGen.THORN)
 							.color(green).special(CRAFT, order.of(armor)),
 					HellfireThornEnchantment::new);

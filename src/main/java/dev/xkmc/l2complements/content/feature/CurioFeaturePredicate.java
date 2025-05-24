@@ -10,7 +10,8 @@ public record CurioFeaturePredicate(Supplier<Item> item) implements FeaturePredi
 
 	@Override
 	public boolean test(LivingEntity e) {
-		return CuriosApi.getCuriosInventory(e).flatMap(x -> x.findFirstCurio(item.get())).isPresent();
+		var opt = CuriosApi.getCuriosInventory(e);
+		return opt.isPresent() && opt.get().isEquipped(item.get());
 	}
 
 }
