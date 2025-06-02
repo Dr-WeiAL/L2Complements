@@ -11,11 +11,10 @@ import java.util.List;
 
 public class SculkiumTool extends ExtraToolConfig {
 
-	public static float cachedHardness;
-
 	@Override
 	public float getDestroySpeed(ItemStack stack, BlockState state, float old) {
-		return cachedHardness > 1 ? old * cachedHardness : old;
+		var destroySpeed = state.destroySpeed;
+		return destroySpeed > 1 ? old * destroySpeed : old;
 	}
 
 	@Override
