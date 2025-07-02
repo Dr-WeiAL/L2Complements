@@ -26,7 +26,7 @@ public class SharpBladeEnchantment extends AbstractBladeEnchantment {
 						new MobEffectInstance(LCEffects.BLEED.holder(),
 								LCConfig.SERVER.bleedEnchantDuration.get()),
 						false, true),
-				CustomDescEnchantment.num(lv * 3)
+				CustomDescEnchantment.num(lv * LCConfig.SERVER.bleedEnchantMax.get())
 		).withStyle(color.desc()));
 	}
 
