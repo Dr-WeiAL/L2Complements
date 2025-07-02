@@ -19,7 +19,7 @@ public class SharpBladeEnchantment extends BattleEnchantment {
 	public void doPostAttack(LivingEntity attacker, Entity target, int pLevel) {
 		var le = getTarget(target);
 		if (le != null && !attacker.level().isClientSide())
-			LCEffects.BLEED.get().addTo(le, LCConfig.COMMON.bleedEnchantDuration.get(), pLevel * 3 - 1, EffectUtil.AddReason.SKILL, attacker);
+			LCEffects.BLEED.get().addTo(le, LCConfig.COMMON.bleedEnchantDuration.get(), pLevel * LCConfig.COMMON.bleedEnchantMax.get() - 1, EffectUtil.AddReason.SKILL, attacker);
 	}
 
 }

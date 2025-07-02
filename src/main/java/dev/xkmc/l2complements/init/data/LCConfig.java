@@ -13,11 +13,16 @@ public class LCConfig {
 		public final ForgeConfigSpec.BooleanValue renderEnchOverlay;
 		public final ForgeConfigSpec.IntValue enchOverlayZVal;
 
+		public final ForgeConfigSpec.BooleanValue diggingPreview;
+
 		Client(ForgeConfigSpec.Builder builder) {
 			renderEnchOverlay = builder.comment("Render enchantment character overlay")
 					.define("renderEnchOverlay", true);
 			enchOverlayZVal = builder.comment("The height of enchantment character overlay")
 					.defineInRange("enchOverlayZVal", 250, -1000000, 1000000);
+
+			diggingPreview = builder.comment("Digging Preview")
+					.define("diggingPreview",true);
 		}
 
 	}

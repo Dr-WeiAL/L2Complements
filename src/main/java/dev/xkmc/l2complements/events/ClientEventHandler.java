@@ -6,6 +6,7 @@ import dev.xkmc.l2complements.content.client.RangeDiggingOutliner;
 import dev.xkmc.l2complements.content.enchantment.core.CustomDescEnchantment;
 import dev.xkmc.l2complements.content.feature.EntityFeature;
 import dev.xkmc.l2complements.init.L2Complements;
+import dev.xkmc.l2complements.init.data.LCConfig;
 import dev.xkmc.l2complements.init.data.LCKeys;
 import dev.xkmc.l2complements.network.RotateDiggerToServer;
 import dev.xkmc.l2itemselector.events.GenericKeyEvent;
@@ -104,6 +105,7 @@ public class ClientEventHandler {
 
 	@SubscribeEvent
 	public static void renderLevel(RenderLevelStageEvent event) {
+		if (!LCConfig.CLIENT.diggingPreview.get()) return;
 		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_BLOCK_ENTITIES)
 			renderOutline(event, true);
 		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_PARTICLES)
