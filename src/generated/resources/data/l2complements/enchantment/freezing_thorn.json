@@ -31,10 +31,10 @@
     "base": 10,
     "per_level_above_first": 5
   },
-  "primary_items": "#minecraft:enchantable/armor",
+  "primary_items": "#minecraft:enchantable/chest_armor",
   "slots": [
     "armor"
   ],
-  "supported_items": "#minecraft:enchantable/armor",
+  "supported_items": "#minecraft:enchantable/chest_armor",
   "weight": 1
 }

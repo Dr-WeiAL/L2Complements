@@ -93,8 +93,7 @@ public class SpecialEquipmentEvents {
 	}
 
 	public static void dropExp(ServerLevel level, Vec3 pos, int exp, Operation<Void> original, @Nullable Player player) {
-		if (player == null) return;
-		if (player.getMainHandItem().getEnchantmentLevel(LCEnchantments.ENDER_TRANSPORT.holder()) > 0) {
+		if (player != null && player.getMainHandItem().getEnchantmentLevel(LCEnchantments.ENDER_TRANSPORT.holder()) > 0) {
 			pos = player.position();
 		}
 		original.call(level, pos, exp);

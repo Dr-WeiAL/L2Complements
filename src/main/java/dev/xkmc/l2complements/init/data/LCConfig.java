@@ -11,6 +11,9 @@ public class LCConfig {
 	public static class Client extends ConfigInit {
 
 		public final ModConfigSpec.BooleanValue renderEnchOverlay;
+		public final ModConfigSpec.BooleanValue diggingPreview;
+
+
 
 		public Client(Builder builder) {
 			markL2();
@@ -18,6 +21,9 @@ public class LCConfig {
 					.text("Render L2 enchantment book overlay")
 					.comment("Render a colored char on enchantment book to tell it apart from vanilla ones")
 					.define("renderEnchOverlay", true);
+			diggingPreview = builder.text("Digging Enchantment Area Preview")
+					.define("diggingPreview",true);
+
 		}
 	}
 

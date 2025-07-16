@@ -1,12 +1,12 @@
-// 1.21.1	2025-03-21T22:01:58.069184	Registrate Provider for l2complements [Data Maps, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Patchouli Provider, Tags (mob_effect), Tags (attribute), Registries, Tags (enchantment), Tags (damage_type), Recipes]
+// 1.21.1	2025-07-16T13:18:28.036542	Registrate Provider for l2complements [Data Maps, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Patchouli Provider, Tags (mob_effect), Tags (attribute), Registries, Tags (enchantment), Tags (damage_type), Recipes]
 88a7338b7748dc865dfa6385e6ab8a7d8c51d9e5 assets/l2complements/blockstates/eternal_anvil.json
 a44dc95a8b23a9a3a34ebedf5c56b08dbde6cf0e assets/l2complements/blockstates/eternium_block.json
 896090a34932dc7eac905366381145086122a95d assets/l2complements/blockstates/poseidite_block.json
 b2a769b51ddce14c173a64b5457cccb4d8ef6a45 assets/l2complements/blockstates/sculkium_block.json
 2b88df6f8b01f3c72273ce13dbcb556f7dab321d assets/l2complements/blockstates/shulkerate_block.json
 65262ae0f886f61c163059f15c2ad1a7ba9c264a assets/l2complements/blockstates/totemic_gold_block.json
-981f16e230c72d89c67fba614c3394cc6c1b803d assets/l2complements/lang/en_ud.json
-557c217f4414b9f9fe369de24913e3d5db322dcc assets/l2complements/lang/en_us.json
+861ee010e0321e1c2ac1d4db8baf24de47044afd assets/l2complements/lang/en_ud.json
+f2ae6f836e49dfb638802ca9d50b5d27fbb5e447 assets/l2complements/lang/en_us.json
 bb63c088704d714f1763cb16cec8af6cd1006d66 assets/l2complements/models/block/eternium_block.json
 a45ee09acc262fd67be22de093136ad757f08e61 assets/l2complements/models/block/poseidite_block.json
 a52909a3a44a80695da32b5c3c5f931a0f72f74d assets/l2complements/models/block/sculkium_block.json
@@ -452,11 +452,11 @@ fdc1e9e18bba14e016eff0a42f7f816c78e19321 data/l2complements/enchantment/ender_ma
 5680e565b9fd5fe6653d806652813629f9e0cd26 data/l2complements/enchantment/explosion_immunity.json
 5e66f0893c73a31d6e04134f4bf78f90cff89b73 data/l2complements/enchantment/fire_immunity.json
 8715065aa0b3a1456187c5c2e9f7e5464bb320f7 data/l2complements/enchantment/freezing_blade.json
-90cd0aa8e621223465f120c82560bc7ba380cf09 data/l2complements/enchantment/freezing_thorn.json
+85843cc661c647397a1f325f680b59c4c1750479 data/l2complements/enchantment/freezing_thorn.json
 9b7fc0a0205d7c87fa8f9594fba5fde6a96c9573 data/l2complements/enchantment/friendly_fire_protection.json
 d2613deebccc2df9b9865338d0401a4e3dd092d7 data/l2complements/enchantment/hardened.json
 d719fb768f56a33d3414d4e8fd26a286cae48f94 data/l2complements/enchantment/hellfire_blade.json
-52244807208e09e581b9db3c8af311ae0ae3a53c data/l2complements/enchantment/hellfire_thorn.json
+87102b69fc030d1cbf6e736e6631e4d21b1305f9 data/l2complements/enchantment/hellfire_thorn.json
 557a8e1ba2fb980d5e8396f7382704907d333295 data/l2complements/enchantment/invincible.json
 8dc74520f2b26aa038913b2e224fedde15dbbf3e data/l2complements/enchantment/life_mending.json
 005eb6096fad3472c27b896f39f2478cbf86c072 data/l2complements/enchantment/life_sync.json
