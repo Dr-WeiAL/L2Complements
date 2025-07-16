@@ -1,3 +1,6 @@
+2.5.7
+- Fix the bug that player drop no experience on death
+
 2.5.6
 - Add config to disable digging enchantment preview
 - fix config for sharp blade
