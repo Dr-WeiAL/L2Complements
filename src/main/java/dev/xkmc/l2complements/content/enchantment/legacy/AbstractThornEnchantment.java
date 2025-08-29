@@ -12,9 +12,9 @@ import java.util.List;
 
 public abstract class AbstractThornEnchantment extends LegacyEnchantment implements CustomDescEnchantment {
 
-	public void onDamage(LivingEntity self, LivingEntity le, int level) {
-		if (le != self && !self.level().isClientSide())
-			EffectUtil.addEffect(le, getEffect(level), self);
+	public void onDamage(LivingEntity attacker, LivingEntity wearer, int level) {
+		if (wearer != attacker && !attacker.level().isClientSide())
+			EffectUtil.addEffect(attacker, getEffect(level), wearer);
 	}
 
 	protected abstract MobEffectInstance getEffect(int pLevel);

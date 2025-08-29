@@ -1,8 +1,8 @@
 package dev.xkmc.l2complements.events;
 
-import dev.xkmc.l2complements.content.enchantment.legacy.AbstractThornEnchantment;
-import dev.xkmc.l2complements.content.enchantment.legacy.AbstractBladeEnchantment;
 import dev.xkmc.l2complements.content.enchantment.core.SourceModifierEnchantment;
+import dev.xkmc.l2complements.content.enchantment.legacy.AbstractBladeEnchantment;
+import dev.xkmc.l2complements.content.enchantment.legacy.AbstractThornEnchantment;
 import dev.xkmc.l2complements.content.enchantment.legacy.VoidTouchEnchantment;
 import dev.xkmc.l2complements.init.data.LCConfig;
 import dev.xkmc.l2complements.init.registrate.LCItems;
@@ -10,6 +10,7 @@ import dev.xkmc.l2core.init.reg.ench.LegacyEnchantment;
 import dev.xkmc.l2damagetracker.contents.attack.AttackListener;
 import dev.xkmc.l2damagetracker.contents.attack.CreateSourceEvent;
 import dev.xkmc.l2damagetracker.contents.attack.DamageData;
+import dev.xkmc.l2damagetracker.init.data.L2DamageTypes;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.animal.Chicken;
@@ -102,7 +103,7 @@ public class LCAttackListener implements AttackListener {
 
 	@Override
 	public void onDamage(DamageData.Defence data) {
-		if (!data.getWeapon().isEmpty()) {
+		if (data.getSource().is(L2DamageTypes.DIRECT)) {
 			VoidTouchEnchantment.initDamage(data, data.getWeapon());
 			var attacker = data.getAttacker();
 			if (attacker != null) {
