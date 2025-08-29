@@ -109,9 +109,8 @@ public class MaterialEventHandler {
 	public static void onItemKill(Level level, Entity entity, ItemStack stack) {
 		BurntRecipe.Inv inv = new BurntRecipe.Inv();
 		inv.setItem(0, stack);
-		var opt = level.getRecipeManager().getRecipeFor(LCRecipes.RT_BURNT.get(), inv, level);
-		if (opt.isPresent()) {
-			BurntRecipe r = opt.get();
+		var opt = level.getRecipeManager().getRecipesFor(LCRecipes.RT_BURNT.get(), inv, level);
+		for (var r : opt) {
 			ItemStack result = r.assemble(inv, level.registryAccess());
 			int chance = r.chance;
 			int trial = stack.getCount();

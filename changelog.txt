@@ -1,3 +1,6 @@
+2.5.8
+- Allow multi-recipe handling for burning item recipes, fix recipe conflict
+
 2.5.7
 - Fix the bug that player drop no experience on death
 
