@@ -1,3 +1,8 @@
+3.0.19
+- Make warpstone support durability enchantment
+- Make cleanse not clearing raid omen
+- Fix stable body for fire damage
+
 3.0.18
 - Allow multi-recipe handling for burning item recipes, fix recipe conflict
 

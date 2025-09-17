@@ -154,6 +154,7 @@ public class LCItems {
 					.defaultModel().defaultLang().register();
 			REINFORCED_WARP_STONE = REGISTRATE.item("reinforced_warp_stone", p ->
 							new WarpStone(p.fireResistant().stacksTo(1).durability(64).rarity(Rarity.RARE), false))
+					.tag(ItemTags.DURABILITY_ENCHANTABLE)
 					.defaultModel().defaultLang().register();
 
 			TagKey<Item> charm = ItemTags.create(ResourceLocation.fromNamespaceAndPath("curios", "charm"));

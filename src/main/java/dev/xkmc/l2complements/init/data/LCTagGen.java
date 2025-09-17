@@ -55,6 +55,8 @@ public class LCTagGen {
 		pvd.addTag(SKILL_EFFECT).add(
 				MobEffects.NIGHT_VISION.value(),
 				MobEffects.BAD_OMEN.value(),
+				MobEffects.TRIAL_OMEN.value(),
+				MobEffects.RAID_OMEN.value(),
 				MobEffects.HERO_OF_THE_VILLAGE.value(),
 				MobEffects.DOLPHINS_GRACE.value(),
 				MobEffects.CONDUIT_POWER.value(),

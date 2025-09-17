@@ -2,6 +2,8 @@
   "values": [
     "minecraft:night_vision",
     "minecraft:bad_omen",
+    "minecraft:trial_omen",
+    "minecraft:raid_omen",
     "minecraft:hero_of_the_village",
     "minecraft:dolphins_grace",
     "minecraft:conduit_power",
