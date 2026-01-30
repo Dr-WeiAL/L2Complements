@@ -3,6 +3,7 @@ package dev.xkmc.l2complements.content.item.equipments;
 import dev.xkmc.l2complements.init.data.LCConfig;
 import dev.xkmc.l2complements.init.data.LCLang;
 import dev.xkmc.l2complements.init.materials.LCMats;
+import dev.xkmc.l2core.events.SchedulerHandler;
 import dev.xkmc.l2damagetracker.contents.attack.DamageData;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import dev.xkmc.l2damagetracker.contents.materials.generic.ExtraToolConfig;
@@ -35,8 +36,12 @@ public class TotemicTool extends ExtraToolConfig {
 	public void onDamage(DamageData.Offence cache, ItemStack stack) {
 		if (cache.getTarget().getType().is(EntityTypeTags.SENSITIVE_TO_SMITE)) {
 			cache.addHurtModifier(DamageModifier.multAttr((float) (1 + LCConfig.SERVER.mobTypeBonus.get()),
-					LCMats.POSEIDITE.id().withSuffix("_smite")));
+					LCMats.TOTEMIC_GOLD.id().withSuffix("_smite")));
 		}
+	}
+
+	public void onLostDurability(ItemStack stack, int amount, LivingEntity player) {
+		SchedulerHandler.schedule(() -> player.heal(amount));
 	}
 
 }

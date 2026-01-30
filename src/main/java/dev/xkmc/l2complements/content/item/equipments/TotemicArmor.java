@@ -27,17 +27,13 @@ public class TotemicArmor extends ExtraArmorConfig {
 	}
 
 	@Override
-	public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity) {
-		if (entity instanceof LivingEntity player) {
-			SchedulerHandler.schedule(() -> player.heal(amount));
-		}
-		return super.damageItem(stack, amount, entity);
-	}
-
-	@Override
 	public void addTooltip(ItemStack stack, List<Component> list) {
 		list.add(LCLang.IDS.TOTEMIC_ARMOR.get().withStyle(ChatFormatting.GRAY));
 		super.addTooltip(stack, list);
+	}
+
+	public void onLostDurability(ItemStack stack, int amount, LivingEntity player) {
+		SchedulerHandler.schedule(() -> player.heal(amount));
 	}
 
 }

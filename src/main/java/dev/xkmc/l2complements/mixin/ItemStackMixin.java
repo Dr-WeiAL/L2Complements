@@ -4,6 +4,8 @@ import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
+import dev.xkmc.l2complements.content.item.equipments.TotemicArmor;
+import dev.xkmc.l2complements.events.MagicEventHandler;
 import dev.xkmc.l2complements.events.SpecialEquipmentEvents;
 import dev.xkmc.l2complements.init.data.LCDamageTypes;
 import dev.xkmc.l2complements.init.data.LCConfig;
@@ -13,6 +15,7 @@ import dev.xkmc.l2complements.init.registrate.LCItems;
 import dev.xkmc.l2core.events.SchedulerHandler;
 import dev.xkmc.l2core.util.Proxy;
 import dev.xkmc.l2core.util.ServerProxy;
+import dev.xkmc.l2damagetracker.contents.materials.generic.GenericArmorItem;
 import dev.xkmc.l2serial.util.Wrappers;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -31,6 +34,8 @@ public abstract class ItemStackMixin implements IItemStackExtension {
 
 	@Shadow
 	public abstract boolean is(TagKey<Item> tag);
+
+	@Shadow public abstract Item getItem();
 
 	@WrapOperation(at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;setDamageValue(I)V"),
 			method = "hurtAndBreak(ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V")
@@ -72,6 +77,7 @@ public abstract class ItemStackMixin implements IItemStackExtension {
 				}
 			}
 		}
+		MagicEventHandler.onDurabilityLost(self, val, user);
 		op.call(self, val);
 	}
 

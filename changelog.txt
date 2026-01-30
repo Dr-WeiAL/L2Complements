@@ -1,3 +1,7 @@
+3.0.20
+- Totemic tools and armor heal based on actual durability loss
+-
+
 3.0.19
 - Make warpstone support durability enchantment
 - Make cleanse not clearing raid omen

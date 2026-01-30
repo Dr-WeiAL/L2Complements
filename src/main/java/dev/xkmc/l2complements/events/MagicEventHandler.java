@@ -5,6 +5,8 @@ import dev.xkmc.l2complements.content.effect.CleanseEffect;
 import dev.xkmc.l2complements.content.enchantment.core.SoulBoundPlayerData;
 import dev.xkmc.l2complements.content.enchantment.digging.DiggerHelper;
 import dev.xkmc.l2complements.content.feature.EntityFeature;
+import dev.xkmc.l2complements.content.item.equipments.TotemicArmor;
+import dev.xkmc.l2complements.content.item.equipments.TotemicTool;
 import dev.xkmc.l2complements.init.L2Complements;
 import dev.xkmc.l2complements.init.data.LCConfig;
 import dev.xkmc.l2complements.init.data.LCTagGen;
@@ -13,6 +15,8 @@ import dev.xkmc.l2complements.init.registrate.LCEnchantments;
 import dev.xkmc.l2core.base.effects.ForceAddEffectEvent;
 import dev.xkmc.l2core.events.SchedulerHandler;
 import dev.xkmc.l2core.init.reg.ench.LegacyEnchantment;
+import dev.xkmc.l2damagetracker.contents.materials.generic.GenericArmorItem;
+import dev.xkmc.l2damagetracker.contents.materials.generic.GenericTieredItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerPlayer;
@@ -34,6 +38,7 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
@@ -183,6 +188,16 @@ public class MagicEventHandler {
 
 	public static Stream<Holder<Enchantment>> lootEnch(Stream<Holder<Enchantment>> instance) {
 		return instance.filter(e -> LegacyEnchantment.firstOf(e, LCEnchantments.CRAFT) == null);
+	}
+
+	public static void onDurabilityLost(ItemStack stack, int val, @Nullable LivingEntity user) {
+		if (user == null) return;
+		if (stack.getItem() instanceof GenericArmorItem armor && armor.getConfig() instanceof TotemicArmor config) {
+			config.onLostDurability(stack, val, user);
+		}
+		if (stack.getItem() instanceof GenericTieredItem tool && tool.getExtraConfig() instanceof TotemicTool config) {
+			config.onLostDurability(stack, val, user);
+		}
 	}
 
 }
