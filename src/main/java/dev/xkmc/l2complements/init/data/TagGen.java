@@ -12,6 +12,7 @@ import dev.xkmc.l2complements.init.registrate.LCEnchantments;
 import dev.xkmc.l2complements.init.registrate.LCEntities;
 import dev.xkmc.l2library.init.data.L2TagGen;
 import dev.xkmc.l2screentracker.init.L2STTagGen;
+import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.EntityTypeTags;
@@ -26,6 +27,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Arrays;
@@ -60,6 +62,74 @@ public class TagGen {
 				MobEffects.CONDUIT_POWER,
 				MobEffects.WATER_BREATHING
 		);
+		if (ModList.get().isLoaded(IronsSpellbooks.MODID)) {
+			pvd.addTag(SKILL_EFFECT)
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "angel_wings"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "evasion"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "heartstop"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "abyssal_shroud"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "ascension"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "charged"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "true_invisibility"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "fortify"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "spider_aspect"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "guided"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "airborne"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "vigor"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "oakskin"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "planar_sight"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "antigravity"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "hastened"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "burning_dash"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "gluttony"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "echoing_strikes"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "thunderstorm"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "volt_strike"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "frostbite"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "immolate"))
+					.addOptional(new ResourceLocation(IronsSpellbooks.MODID, "fall_damage_immunity"));
+		}
+		if (ModList.get().isLoaded("traveloptics")) {
+			pvd.addTag(SKILL_EFFECT)
+					.addOptional(new ResourceLocation("traveloptics", "frozen_sight"))
+					.addOptional(new ResourceLocation("traveloptics", "vigor_siphon"))
+					.addOptional(new ResourceLocation("traveloptics", "abyssal_strike"))
+					.addOptional(new ResourceLocation("traveloptics", "assassin"))
+					.addOptional(new ResourceLocation("traveloptics", "lingering_strain"))
+					.addOptional(new ResourceLocation("traveloptics", "aerial_collapse_helper"))
+					.addOptional(new ResourceLocation("traveloptics", "spectral_blink"))
+					.addOptional(new ResourceLocation("traveloptics", "meteor_storm"))
+					.addOptional(new ResourceLocation("traveloptics", "reversal"))
+					.addOptional(new ResourceLocation("traveloptics", "consume"))
+					.addOptional(new ResourceLocation("traveloptics", "vortex_punch"))
+					.addOptional(new ResourceLocation("traveloptics", "casting"))
+					.addOptional(new ResourceLocation("traveloptics", "phantom_rage"))
+					.addOptional(new ResourceLocation("traveloptics", "spirit_damage_helper"))
+					.addOptional(new ResourceLocation("traveloptics", "replenish"))
+					.addOptional(new ResourceLocation("traveloptics", "jet_steam"))
+					.addOptional(new ResourceLocation("traveloptics", "tidal_grasp"))
+					.addOptional(new ResourceLocation("traveloptics", "floodgate"))
+					.addOptional(new ResourceLocation("traveloptics", "astral_path_reveal"))
+					.addOptional(new ResourceLocation("traveloptics", "astral_sense"))
+					.addOptional(new ResourceLocation("traveloptics", "astral_sense_treasure"))
+					.addOptional(new ResourceLocation("traveloptics", "crimson_descend"));
+		}
+		if (ModList.get().isLoaded("cataclysm")) {
+			pvd.addTag(SKILL_EFFECT)
+					.addOptional(new ResourceLocation("cataclysm", "monstrous"))
+					.addOptional(new ResourceLocation("cataclysm", "blessing_of_amethyst"))
+					.addOptional(new ResourceLocation("cataclysm", "ghost_form"))
+					.addOptional(new ResourceLocation("cataclysm", "ghost_sickness"));
+		}
+		if (ModList.get().isLoaded("ars_nouveau")) {
+			pvd.addTag(SKILL_EFFECT)
+					.addOptional(new ResourceLocation("ars_nouveau", "scrying"))
+					.addOptional(new ResourceLocation("ars_nouveau", "glide"))
+					.addOptional(new ResourceLocation("ars_nouveau", "flight"))
+					.addOptional(new ResourceLocation("ars_nouveau", "immolate"))
+					.addOptional(new ResourceLocation("ars_nouveau", "bounce"))
+					.addOptional(new ResourceLocation("ars_nouveau", "magic_find"));
+		}
 		pvd.addTag(L2TagGen.TRACKED_EFFECTS).add(LCEffects.FLAME.get(), LCEffects.EMERALD.get(), LCEffects.ICE.get(),
 				LCEffects.STONE_CAGE.get(), LCEffects.BLEED.get(), LCEffects.CLEANSE.get(), LCEffects.CURSE.get());
 	}
