@@ -170,6 +170,8 @@
   "enchantment.l2complements.cubic_eater.desc": "一次挖掘区块对齐的%1$sx%1$sx%1$s的方块",
   "enchantment.l2complements.plane_eater": "平面区块吞噬者",
   "enchantment.l2complements.plane_eater.desc": "一次挖掘区块对齐的16x16的%s层方块",
+  "enchantment.l2complements.echo_mining": "共振连锁",
+  "enchantment.l2complements.echo_mining.desc": "一次挖掘%s格内所有相同的方块，上限%s个",
   "entity.l2complements.black_fire_charge": "黑炎弹",
   "entity.l2complements.soul_fire_charge": "魂炎弹",
   "entity.l2complements.strong_fire_charge": "爆炎弹",

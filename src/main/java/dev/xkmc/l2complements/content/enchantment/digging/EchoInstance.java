@@ -5,10 +5,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
-public record EchoInstance(int r, Block block) implements BlockBreakerInstance {
+public record EchoInstance(int r, int max, Block block) implements BlockBreakerInstance {
 
 	@Override
 	public List<BlockPos> find(Level level, BlockPos pos, Predicate<BlockPos> pred) {
@@ -24,6 +25,8 @@ public record EchoInstance(int r, Block block) implements BlockBreakerInstance {
 				}
 			}
 		}
+		list.sort(Comparator.comparingInt(a -> (int) a.distSqr(pos)));
+		if (list.size() > max) list = list.subList(0, max);
 		return list;
 	}
 

@@ -213,8 +213,8 @@ public class LCEnchantments {
 
 
 			ECHO = reg("echo_mining", EnchantmentCategory.DIGGER, (r, c, s) ->
-							new RangeDiggingEnchantment(new EchoDigger(8), r, c, s),
-					"Dig blocks of the same type within %s blocks")
+							new RangeDiggingEnchantment(new EchoDigger(8, 64), r, c, s),
+					"Dig blocks of the same type within radius of %s, up to %s blocks")
 					.addSlots(EquipmentSlot.MAINHAND)
 					.rarity(Enchantment.Rarity.VERY_RARE).lang("Echo Mining")
 					.register();
