@@ -1,0 +1,74 @@
+{
+  "type": "ars_nouveau:enchantment",
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ars_nouveau"
+        },
+        {
+          "type": "l2library:boolean_config",
+          "expected": true,
+          "line": [
+            "useArsNouveauForEnchantmentRecipe"
+          ],
+          "path": "l2_configs/l2complements-common.toml"
+        }
+      ]
+    }
+  ],
+  "enchantment": "l2complements:echo_mining",
+  "level": 1,
+  "pedestalItems": [
+    {
+      "item": {
+        "type": "l2library:enchantment",
+        "enchantment": "minecraft:efficiency",
+        "min_level": 1
+      }
+    },
+    {
+      "item": {
+        "item": "l2complements:storm_core"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:amethyst_shard"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:amethyst_shard"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:echo_shard"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:echo_shard"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:sculk_sensor"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:sculk_sensor"
+      }
+    }
+  ],
+  "sourceCost": 2000
+}

@@ -617,6 +617,17 @@ public class RecipeGen {
 						.define('E', Items.GOLD_INGOT)
 						.save(pvd, getID(LCEnchantments.VIEN.get()));
 
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.ECHO.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
+						.pattern("ECE").pattern("FAF").pattern("DBD")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
+						.define('B', Items.IRON_PICKAXE)
+						.define('C', LCItems.STORM_CORE.get())
+						.define('D', Items.SCULK_SENSOR)
+						.define('F', Items.ECHO_SHARD)
+						.define('E', Items.AMETHYST_SHARD)
+						.save(pvd, getID(LCEnchantments.ECHO.get()));
+
+
 				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.TREE.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
 						.pattern("ECE").pattern("BAB").pattern("DBD")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))

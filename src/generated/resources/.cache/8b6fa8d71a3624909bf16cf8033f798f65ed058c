@@ -1,12 +1,12 @@
-// 1.20.1	2026-01-31T14:11:53.218915	Registrate Provider for l2complements [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (enchantments), Tags (mob_effects), Tags (attributes), Patchouli Provider]
+// 1.20.1	2026-01-31T14:37:17.612308	Registrate Provider for l2complements [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (enchantments), Tags (mob_effects), Tags (attributes), Patchouli Provider]
 88a7338b7748dc865dfa6385e6ab8a7d8c51d9e5 assets/l2complements/blockstates/eternal_anvil.json
 a44dc95a8b23a9a3a34ebedf5c56b08dbde6cf0e assets/l2complements/blockstates/eternium_block.json
 896090a34932dc7eac905366381145086122a95d assets/l2complements/blockstates/poseidite_block.json
 b2a769b51ddce14c173a64b5457cccb4d8ef6a45 assets/l2complements/blockstates/sculkium_block.json
 2b88df6f8b01f3c72273ce13dbcb556f7dab321d assets/l2complements/blockstates/shulkerate_block.json
 65262ae0f886f61c163059f15c2ad1a7ba9c264a assets/l2complements/blockstates/totemic_gold_block.json
-f7266e4ece301391b9baf3acb06d3cd04634b7d7 assets/l2complements/lang/en_ud.json
-44562a53c8185f115770f18c46d0a95e730e0e1b assets/l2complements/lang/en_us.json
+7c1780c6451d811fd0387bdafdb347f27754c278 assets/l2complements/lang/en_ud.json
+d744aca07e7924a81eaddf0fbc6a0155f5b4d0f1 assets/l2complements/lang/en_us.json
 bb63c088704d714f1763cb16cec8af6cd1006d66 assets/l2complements/models/block/eternium_block.json
 a45ee09acc262fd67be22de093136ad757f08e61 assets/l2complements/models/block/poseidite_block.json
 a52909a3a44a80695da32b5c3c5f931a0f72f74d assets/l2complements/models/block/sculkium_block.json
@@ -188,6 +188,7 @@ e6bd2e91c2a6751e9709a95f001a4ef7edb3b840 data/l2complements/advancements/recipes
 450a8a3816ee15799899d3166edc5aca1bed2fbc data/l2complements/advancements/recipes/enchantments/enchantments/durable_armor_1.json
 979f2de84576e16deed81a2469874a717c474944 data/l2complements/advancements/recipes/enchantments/enchantments/durable_armor_2.json
 356df5b0153755ec3e64715d92aa719580c772f3 data/l2complements/advancements/recipes/enchantments/enchantments/durable_armor_3.json
+9f225c87cb355c5e125059cdc9a0d381a615c2f4 data/l2complements/advancements/recipes/enchantments/enchantments/echo_mining.json
 b7c6bc61ac1ad8c49089badaf77984f407ce59ca data/l2complements/advancements/recipes/enchantments/enchantments/ender_mask.json
 df24af65aaecd5755c42c70e70c744dd3a5d6763 data/l2complements/advancements/recipes/enchantments/enchantments/ender_reach.json
 b5f98065bff9234a4243497751177901c76fcac6 data/l2complements/advancements/recipes/enchantments/enchantments/environment_reject.json
@@ -544,6 +545,8 @@ c7eeb6250b857e414e213603f336b650b5a28f3e data/l2complements/recipes/enchantments
 dd83d16eb79eb4004b1c95079200944f3e778e22 data/l2complements/recipes/enchantments/durable_armor_2_ars.json
 581dcff866ce28ea7bbd280890166e4c2ab96a40 data/l2complements/recipes/enchantments/durable_armor_3.json
 2856629613e8ac1202c2ce00f84ab469b4c1aca6 data/l2complements/recipes/enchantments/durable_armor_3_ars.json
+e62bf0d40a68a89f37435de3a6778192c1b2003f data/l2complements/recipes/enchantments/echo_mining.json
+409e5e85c54b5843edf16fabe1211ee96c7b22cf data/l2complements/recipes/enchantments/echo_mining_ars.json
 a5747d61c3d6bfabf6767399c32b6f45ddc3d013 data/l2complements/recipes/enchantments/ender_mask.json
 c028cb314c1e4f57dcc08de04a81fca15cd2a03c data/l2complements/recipes/enchantments/ender_mask_ars.json
 55f07c58912ec85f4860e98f04bae7bbea17000a data/l2complements/recipes/enchantments/ender_reach.json

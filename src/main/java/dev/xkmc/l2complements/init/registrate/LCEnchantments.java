@@ -53,7 +53,7 @@ public class LCEnchantments {
 	public static final RegistryEntry<DurableArmorEnchantment> DURABLE_ARMOR;
 	public static final RegistryEntry<VoidTouchEnchantment> VOID_TOUCH;
 
-	public static final RegistryEntry<RangeDiggingEnchantment> CUBIC, PLANE, DRILL, VIEN, TREE,
+	public static final RegistryEntry<RangeDiggingEnchantment> CUBIC, PLANE, DRILL, VIEN, ECHO, TREE,
 			CHUNK_CUBIC, CHUNK_PLANE;
 
 	static {
@@ -209,6 +209,14 @@ public class LCEnchantments {
 					"Dig connected blocks of the same type, up to %s blocks")
 					.addSlots(EquipmentSlot.MAINHAND)
 					.rarity(Enchantment.Rarity.VERY_RARE).lang("Vein Mining")
+					.register();
+
+
+			ECHO = reg("echo_mining", EnchantmentCategory.DIGGER, (r, c, s) ->
+							new RangeDiggingEnchantment(new EchoDigger(8), r, c, s),
+					"Dig blocks of the same type within %s blocks")
+					.addSlots(EquipmentSlot.MAINHAND)
+					.rarity(Enchantment.Rarity.VERY_RARE).lang("Echo Mining")
 					.register();
 
 

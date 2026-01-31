@@ -48,6 +48,8 @@
   "enchantment.l2complements.drill_digging.desc": "Dig %s blocks at once",
   "enchantment.l2complements.durable_armor": "Durable Armor",
   "enchantment.l2complements.durable_armor.desc": "Armor will have higher durability. Conflict with Unbreaking.",
+  "enchantment.l2complements.echo_mining": "Echo Mining",
+  "enchantment.l2complements.echo_mining.desc": "Dig blocks of the same type within %s blocks",
   "enchantment.l2complements.ender_mask": "Ender Mask",
   "enchantment.l2complements.ender_mask.desc": "Endermen won't be mad at you for direct eye contact",
   "enchantment.l2complements.ender_reach": "Ender Reach",
