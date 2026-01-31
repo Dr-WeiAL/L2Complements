@@ -453,5 +453,5 @@
   "l2complements.configuration.diggingPreview": "连锁附魔范围预览渲染",
   "l2complements.configuration.diggingPreview.tooltip": "",
   "enchantment.l2complements.echo_mining": "共振连锁",
-  "enchantment.l2complements.echo_mining.desc": "一次挖掘%s格内所有相同的方块"
+  "enchantment.l2complements.echo_mining.desc": "一次挖掘%s格内所有相同的方块，上限%s个"
 }

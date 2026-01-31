@@ -265,10 +265,10 @@ public class LCEnchantments {
 							.color(green).special(CRAFT, order.of(digging)),
 					() -> new RangeDiggingEnchantment(new OreDigger(7, 8)));
 
-			ECHO = REG.enchLegacy("echo_mining", "Echo Mining", "Dig blocks of the same type within %s blocks",
+			ECHO = REG.enchLegacy("echo_mining", "Echo Mining", "Dig blocks of the same type within radius of %s, up to %s blocks",
 					e -> e.items(ItemTags.MINING_ENCHANTABLE).maxLevel(3)
 							.color(green).special(CRAFT, order.of(digging)),
-					() -> new RangeDiggingEnchantment(new EchoDigger(8)));
+					() -> new RangeDiggingEnchantment(new EchoDigger(8, 64)));
 
 			TREE = REG.enchLegacy("tree_chopper", "Tree Tropper", "Chop logs and adjacent leaves",
 					e -> e.items(ItemTags.MINING_ENCHANTABLE).maxLevel(2)
