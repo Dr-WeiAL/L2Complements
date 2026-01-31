@@ -1,6 +1,7 @@
 package dev.xkmc.l2complements.init;
 
 import com.tterrag.registrate.providers.ProviderType;
+import dev.xkmc.l2complements.content.client.SpeedTrackerPacket;
 import dev.xkmc.l2complements.content.item.wand.WandEffectToClient;
 import dev.xkmc.l2complements.events.L2ComplementsClick;
 import dev.xkmc.l2complements.events.LCAttackListener;
@@ -43,7 +44,8 @@ public class L2Complements {
 			MODID, 4,
 			e -> e.create(EmptyRightClickToServer.class, PLAY_TO_SERVER),
 			e -> e.create(RotateDiggerToServer.class, PLAY_TO_SERVER),
-			e -> e.create(WandEffectToClient.class, PLAY_TO_CLIENT)
+			e -> e.create(WandEffectToClient.class, PLAY_TO_CLIENT),
+			e -> e.create(SpeedTrackerPacket.class, PLAY_TO_CLIENT)
 	);
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final Reg REG = new Reg(MODID);

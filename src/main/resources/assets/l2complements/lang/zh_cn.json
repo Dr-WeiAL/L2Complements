@@ -298,7 +298,7 @@
   "l2complements.tooltip.misc.effect_kill": "通过杀死处于%2$s效果下的%1$s获得",
   "l2complements.tooltip.misc.click": "通过拿[%2$s]右键%1$s获得",
   "l2complements.tooltip.misc.transform_rune": "右键使%s转化为%s",
-  "l2complements.tooltip.misc.captured_wind": "玩家移动速度超过%s格每秒的时候，背包内/手上[%s]转化获得",
+  "l2complements.tooltip.misc.captured_wind": "玩家空中移动速度超过%s格每秒的时候，背包内/手上[%s]转化获得",
   "l2complements.tooltip.misc.explosion_shard": "承受%s的爆炸伤害并存活获得",
   "l2complements.tooltip.misc.hard_ice": "用细雪冻死%s获得",
   "l2complements.tooltip.misc.resonant_feather": "%s受到音爆攻击而存活时掉落",
@@ -449,5 +449,7 @@
   "effect.l2complements.frost.desc": "让实体减速，等同于让实体陷入细雪",
   "effect.l2complements.frost.description": "让实体减速，等同于让实体陷入细雪",
   "effect.l2complements.incarceration.desc": "让实体无法移动，也无法改变位置",
-  "effect.l2complements.incarceration.description": "让实体无法移动，也无法改变位置"
+  "effect.l2complements.incarceration.description": "让实体无法移动，也无法改变位置",
+  "l2complements.configuration.diggingPreview": "连锁附魔范围预览渲染",
+  "l2complements.configuration.diggingPreview.tooltip": ""
 }
