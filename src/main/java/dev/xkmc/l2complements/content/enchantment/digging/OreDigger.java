@@ -4,7 +4,7 @@ public record OreDigger(int r, int max) implements SimpleNumberDesc {
 
 	@Override
 	public BlockBreakerInstance getInstance(DiggerContext ctx) {
-		return new VienInstance(-r, r, -r, r, -r, r, max << (ctx.level() - 1), state -> state.getBlock() == ctx.state().getBlock());
+		return new VeinInstance(-r, r, -r, r, -r, r, max << (ctx.level() - 1), state -> state.getBlock() == ctx.state().getBlock());
 	}
 
 	@Override

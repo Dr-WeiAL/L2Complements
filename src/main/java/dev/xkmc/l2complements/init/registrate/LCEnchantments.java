@@ -208,7 +208,7 @@ public class LCEnchantments {
 							new RangeDiggingEnchantment(new OreDigger(7, 8), r, c, s),
 					"Dig connected blocks of the same type, up to %s blocks")
 					.addSlots(EquipmentSlot.MAINHAND)
-					.rarity(Enchantment.Rarity.VERY_RARE).lang("Vien Mining")
+					.rarity(Enchantment.Rarity.VERY_RARE).lang("Vein Mining")
 					.register();
 
 

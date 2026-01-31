@@ -104,7 +104,7 @@
   "enchantment.l2complements.stable_body.desc": "Player won't be knocked back when wearing chestplate with this enchantment.",
   "enchantment.l2complements.tree_chopping": "Tree Chopper",
   "enchantment.l2complements.tree_chopping.desc": "Chop logs and adjacent leaves",
-  "enchantment.l2complements.vien_mining": "Vien Mining",
+  "enchantment.l2complements.vien_mining": "Vein Mining",
   "enchantment.l2complements.vien_mining.desc": "Dig connected blocks of the same type, up to %s blocks",
   "enchantment.l2complements.void_touch": "Void Touch",
   "enchantment.l2complements.void_touch.desc": "Have a small chance to deal true damage. Chance increase significantly if the damage bypasses armor or magic already.",

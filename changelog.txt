@@ -1,3 +1,7 @@
+2.5.9
+- Add progress display on wind bottle in process of wind essence
+- Add Echo Mining enchantment
+
 2.5.8
 - Allow multi-recipe handling for burning item recipes, fix recipe conflict
 
