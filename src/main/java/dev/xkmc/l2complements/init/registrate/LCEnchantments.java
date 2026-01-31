@@ -110,7 +110,7 @@ public class LCEnchantments {
 					.addSlots(EquipmentSlot.values()).rarity(Enchantment.Rarity.VERY_RARE).defaultLang().register();
 
 			DAMPENED = reg("dampened", EnchantmentCategory.WEARABLE, SingleLevelEnchantment::new,
-					"When wearing 4 pieces of armors with dampened effect, cancel all vibrations emitted by wearer.")
+					"Cancel all vibrations emitted by wearer.")
 					.addArmorSlots().rarity(Enchantment.Rarity.VERY_RARE).register();
 
 			SOUL_BOUND = reg("soul_bound", ALL, SoulBindingEnchantment::new,
