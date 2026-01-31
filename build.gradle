@@ -199,10 +199,11 @@ dependencies {
     runtimeOnly fg.deobf("dev.xkmc.pandora:pandora:0.1.9-slim")
     runtimeOnly fg.deobf("dev.xkmc.l2modularblock:l2modularblock:1.1.0")
     runtimeOnly fg.deobf("dev.xkmc.l2backpack:l2backpack:2.4.19-slim")
-    runtimeOnly fg.deobf("dev.xkmc.modulargolems:modulargolems:2.4.30-slim")
-    runtimeOnly fg.deobf("dev.xkmc.l2archery:l2archery:2.4.13")
-    runtimeOnly fg.deobf("dev.xkmc.l2weaponry:l2weaponry:2.4.25")
-    //runtimeOnly fg.deobf("dev.xkmc.l2hostility:l2hostility:2.4.20-slim")
+    //runtimeOnly fg.deobf("dev.xkmc.modulargolems:modulargolems:2.6.16-slim")
+    //runtimeOnly fg.deobf("dev.xkmc.l2archery:l2archery:2.4.13")
+    //runtimeOnly fg.deobf("dev.xkmc.l2weaponry:l2weaponry:2.4.25")
+    runtimeOnly fg.deobf("dev.xkmc.l2hostility:l2hostility:2.5.14-slim")
+    runtimeOnly fg.deobf("dev.xkmc.mob_weapon_api:mob_weapon_api:0.2.3")
     //runtimeOnly fg.deobf("dev.xkmc.curseofpandora:curseofpandora:2.4.13-slim")
 
     //runtimeOnly fg.deobf("com.xiaoyue.celestial_core:celestial_core:1.3.1-slim")
@@ -212,22 +213,23 @@ dependencies {
     implementation fg.deobf("mezz.jei:jei-${jei_minecraft_version}:${jei_version}")
     implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     implementation fg.deobf("curse.maven:the-twilight-forest-227639:4635921")
-    implementation fg.deobf("curse.maven:mutil-351914:4824501")
-    implementation fg.deobf("curse.maven:tetra-289712:4857842")
+    //implementation fg.deobf("curse.maven:mutil-351914:4824501")
+    //implementation fg.deobf("curse.maven:tetra-289712:4857842")
 
     implementation fg.deobf("curse.maven:jade-324717:4654448")
     runtimeOnly fg.deobf("curse.maven:attributefix-280510:4588114")
     runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4581675")
     runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:4587429")
     runtimeOnly fg.deobf("curse.maven:patchouli-306770:4636277")
-    runtimeOnly fg.deobf("curse.maven:lendercataclysm-551586:5058433")
-    runtimeOnly fg.deobf("curse.maven:citadel-331936:4848887")
+    //runtimeOnly fg.deobf("curse.maven:lionfish-api-1001614:5922047")
+    //runtimeOnly fg.deobf("curse.maven:lendercataclysm-551586:6208724")
+    //runtimeOnly fg.deobf("curse.maven:citadel-331936:4848887")
 
 
     runtimeOnly fg.deobf("curse.maven:geckolib-388172:4711657")
-    runtimeOnly fg.deobf("curse.maven:playeranimator-658587:4587214")
+    //runtimeOnly fg.deobf("curse.maven:playeranimator-658587:4587214")
     implementation fg.deobf("curse.maven:caelus-308989:4581481")
-    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:4693050")
+    //implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:4693050")
     implementation fg.deobf("curse.maven:ars-nouveau-401955:4751471")
 
     runtimeOnly fg.deobf("curse.maven:just-enough-effect-descriptions-jeed-532286:4599236")
@@ -238,8 +240,8 @@ dependencies {
     implementation fg.deobf("curse.maven:valhelsia-core-416935:5189548")
     implementation fg.deobf("curse.maven:forbidden-arcanus-309858:5198323")
 
-    implementation fg.deobf("curse.maven:mantle-74924:6105891")
-    implementation fg.deobf("curse.maven:tinkers-construct-74072:6111032")
+    //implementation fg.deobf("curse.maven:mantle-74924:6105891")
+    //implementation fg.deobf("curse.maven:tinkers-construct-74072:6111032")
 }
 
 tasks.register('publishCurseForge', TaskPublishCurseForge) {

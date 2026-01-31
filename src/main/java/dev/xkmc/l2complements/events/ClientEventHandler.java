@@ -27,7 +27,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderBlockScreenEffectEvent;
-import net.minecraftforge.client.event.RenderLevelStageEvent;
+import net.minecraftforge.client.event.RenderHighlightEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -104,29 +104,23 @@ public class ClientEventHandler {
 	}
 
 	@SubscribeEvent
-	public static void renderLevel(RenderLevelStageEvent event) {
+	public static void renderLevel(RenderHighlightEvent.Block event) {
 		if (!LCConfig.CLIENT.diggingPreview.get()) return;
-		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_BLOCK_ENTITIES)
-			renderOutline(event, true);
-		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_PARTICLES)
-			renderOutline(event, false);
+		renderOutline(event);
 	}
 
-	private static void renderOutline(RenderLevelStageEvent event, boolean outline) {
+	private static void renderOutline(RenderHighlightEvent.Block event) {
 		var level = Minecraft.getInstance().level;
 		if (level == null) return;
 		var cam = event.getCamera();
 		if (!(cam.getEntity() instanceof Player player)) return;
 		if (!Minecraft.getInstance().gameRenderer.shouldRenderBlockOutline()) return;
-		var hit = Minecraft.getInstance().hitResult;
-		if (hit == null || hit.getType() == HitResult.Type.MISS) return;
-		if (!(hit instanceof BlockHitResult bhit)) return;
-		BlockPos pos = bhit.getBlockPos();
+		BlockPos pos = event.getTarget().getBlockPos();
 		BlockState state = level.getBlockState(pos);
 		if (state.isAir() || !level.getWorldBorder().isWithinBounds(pos)) return;
 		var vec = cam.getPosition().toVector3f();
 		var buffer = Minecraft.getInstance().renderBuffers().bufferSource();
-		RangeDiggingOutliner.renderMoreOutlines(player, pos, buffer, event.getPoseStack(), vec.x, vec.y, vec.z, outline);
+		RangeDiggingOutliner.renderMoreOutlines(player, pos, buffer, event, vec.x, vec.y, vec.z);
 	}
 
 }
