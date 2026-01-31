@@ -6,7 +6,6 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import dev.xkmc.l2complements.content.enchantment.digging.DiggerHelper;
 import dev.xkmc.l2complements.content.enchantment.digging.RangeDiggingEnchantment;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderStateShard;
 import net.minecraft.client.renderer.RenderType;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.phys.BlockHitResult;
+import net.neoforged.neoforge.client.event.RenderHighlightEvent;
 
 import java.util.OptionalDouble;
 
@@ -51,9 +50,10 @@ public class RangeDiggingOutliner {
 	private static ClusterBitSet CACHE = null;
 	private static int tick = 0;
 
-	public static void renderMoreOutlines(Player player, BlockPos pos, MultiBufferSource.BufferSource buffer, PoseStack pose, float x, float y, float z, boolean outline) {
+	public static void renderMoreOutlines(Player player, BlockPos pos, MultiBufferSource.BufferSource buffer, RenderHighlightEvent.Block event, float x, float y, float z) {
+		var pose = event.getPoseStack();
 		ItemStack stack = player.getMainHandItem();
-		var dir = Minecraft.getInstance().hitResult instanceof BlockHitResult bhit ? bhit.getDirection() : Direction.DOWN;
+		var dir = event.getTarget().getDirection();
 		var e = DiggerHelper.getDigger(stack);
 		if (e == null) {
 			KEY = null;
@@ -70,12 +70,13 @@ public class RangeDiggingOutliner {
 			KEY = new CacheKey(e.digger(), e.level(), pos, dir, stack);
 			CACHE = ClusterBitSet.of(pos, e.digger().getTargets(player, pos, stack, e.level()));
 		}
-		if (outline) {
+		{
 			RenderType type = DiggingRenderType.OUTLINE;
 			var v = buffer.getBuffer(type);
 			CACHE.render(false, (x0, y0, z0, x1, y1, z1) -> renderShape(pose, v, x0, y0, z0, x1, y1, z1, -x, -y, -z, 0.4f, 0.4f, 0.4f, 1));
 			CACHE.render(true, (x0, y0, z0, x1, y1, z1) -> renderShape(pose, v, x0, y0, z0, x1, y1, z1, -x, -y, -z, 0.7f, 0.7f, 0.7f, 1));
-		} else {
+		}
+		{
 			RenderType type = RenderType.lines();
 			var v = buffer.getBuffer(type);
 			CACHE.render(true, (x0, y0, z0, x1, y1, z1) -> renderShape(pose, v, x0, y0, z0, x1, y1, z1, -x, -y, -z, 1, 1, 1, 1));
