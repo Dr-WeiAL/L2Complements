@@ -4,6 +4,7 @@ import com.stal111.forbidden_arcanus.ForbiddenArcanus;
 import com.stal111.forbidden_arcanus.core.registry.FARegistries;
 import com.tterrag.registrate.providers.ProviderType;
 import dev.xkmc.l2complements.compat.forbidden.FaARecipe;
+import dev.xkmc.l2complements.content.client.SpeedTrackerPacket;
 import dev.xkmc.l2complements.content.enchantment.special.SoulBoundPlayerData;
 import dev.xkmc.l2complements.content.item.wand.WandEffectToClient;
 import dev.xkmc.l2complements.events.L2ComplementsClick;
@@ -53,7 +54,8 @@ public class L2Complements {
 			new ResourceLocation(MODID, "main"), 4,
 			e -> e.create(EmptyRightClickToServer.class, PLAY_TO_SERVER),
 			e -> e.create(RotateDiggerToServer.class, PLAY_TO_SERVER),
-			e -> e.create(WandEffectToClient.class, PLAY_TO_CLIENT)
+			e -> e.create(WandEffectToClient.class, PLAY_TO_CLIENT),
+			e -> e.create(SpeedTrackerPacket.class, PLAY_TO_CLIENT)
 	);
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final L2Registrate REGISTRATE = new L2Registrate(MODID);
