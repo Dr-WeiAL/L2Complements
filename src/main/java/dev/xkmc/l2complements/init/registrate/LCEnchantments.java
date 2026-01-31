@@ -70,7 +70,7 @@ public class LCEnchantments {
 	public static final EnchVal.Legacy<HellfireThornEnchantment> HELLFIRE_THORN;
 
 	public static final EnchVal.Legacy<RangeDiggingEnchantment>
-			CUBIC, PLANE, DRILL, VIEN, TREE, CHUNK_CUBIC, CHUNK_PLANE;
+			CUBIC, PLANE, DRILL, VIEN, ECHO, TREE, CHUNK_CUBIC, CHUNK_PLANE;
 
 
 	public static final AttVal.PlayerVal<SoulBoundPlayerData> ATT_SOULBOUND = AttReg.of(L2Complements.REG).player("soulbound",
@@ -148,8 +148,8 @@ public class LCEnchantments {
 
 			HARDENED = REG.ench("hardened", "Hardened", "Durability loss will be capped to 1.",
 					e -> e.items(ItemTags.DURABILITY_ENCHANTABLE).effect(b -> b.withEffect(
-							EnchantmentEffectComponents.ITEM_DAMAGE, new LimitValue(() -> 1)
-					)).exclusive(HolderSetBuilder.direct(Enchantments.UNBREAKING))
+									EnchantmentEffectComponents.ITEM_DAMAGE, new LimitValue(() -> 1)
+							)).exclusive(HolderSetBuilder.direct(Enchantments.UNBREAKING))
 							.color(gold).special(CRAFT, order.of(durable)));
 
 			STABLE_BODY = REG.ench("stable_body", "Stable Body", "Player won't be knocked back when wearing chestplate with this enchantment.",
@@ -260,10 +260,15 @@ public class LCEnchantments {
 							.color(green).special(CRAFT, order.of(digging)),
 					() -> new RangeDiggingEnchantment(new DrillBlockBreaker(7)));
 
-			VIEN = REG.enchLegacy("vien_mining", "Vien Mining", "Dig connected blocks of the same type, up to %s blocks",
+			VIEN = REG.enchLegacy("vien_mining", "Vein Mining", "Dig connected blocks of the same type, up to %s blocks",
 					e -> e.items(ItemTags.MINING_ENCHANTABLE).maxLevel(3)
 							.color(green).special(CRAFT, order.of(digging)),
 					() -> new RangeDiggingEnchantment(new OreDigger(7, 8)));
+
+			ECHO = REG.enchLegacy("echo_mining", "Echo Mining", "Dig blocks of the same type within %s blocks",
+					e -> e.items(ItemTags.MINING_ENCHANTABLE).maxLevel(3)
+							.color(green).special(CRAFT, order.of(digging)),
+					() -> new RangeDiggingEnchantment(new EchoDigger(8)));
 
 			TREE = REG.enchLegacy("tree_chopper", "Tree Tropper", "Chop logs and adjacent leaves",
 					e -> e.items(ItemTags.MINING_ENCHANTABLE).maxLevel(2)

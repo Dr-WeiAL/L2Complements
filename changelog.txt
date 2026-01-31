@@ -1,6 +1,7 @@
 3.0.20
 - Totemic tools and armor heal based on actual durability loss
--
+- Wind bottle display speed in progress of obtaining captured wind
+- Add Echo Mining enchantment
 
 3.0.19
 - Make warpstone support durability enchantment

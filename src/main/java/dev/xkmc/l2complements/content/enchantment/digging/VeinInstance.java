@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.*;
 import java.util.function.Predicate;
 
-public record VienInstance(int x0, int x1, int y0, int y1, int z0, int z1, int max,
+public record VeinInstance(int x0, int x1, int y0, int y1, int z0, int z1, int max,
 						   Predicate<BlockState> match) implements BlockBreakerInstance {
 
 	@Override
