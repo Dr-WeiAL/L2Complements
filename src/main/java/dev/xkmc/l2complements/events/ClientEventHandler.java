@@ -23,8 +23,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderBlockScreenEffectEvent;
 import net.minecraftforge.client.event.RenderHighlightEvent;
@@ -106,10 +104,6 @@ public class ClientEventHandler {
 	@SubscribeEvent
 	public static void renderLevel(RenderHighlightEvent.Block event) {
 		if (!LCConfig.CLIENT.diggingPreview.get()) return;
-		renderOutline(event);
-	}
-
-	private static void renderOutline(RenderHighlightEvent.Block event) {
 		var level = Minecraft.getInstance().level;
 		if (level == null) return;
 		var cam = event.getCamera();
