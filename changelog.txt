@@ -1,7 +1,10 @@
-3.0.20
+3.1.0
 - Totemic tools and armor heal based on actual durability loss
 - Wind bottle display speed in progress of obtaining captured wind
 - Add Echo Mining enchantment
+- Fix mining preview bug
+- Add many effects to whitelist of Cleanse, mainly effects from spells and equipments that applies to oneself
+- Add some magic mod damage type to magic tag
 
 3.0.19
 - Make warpstone support durability enchantment
