@@ -1,6 +1,9 @@
 2.5.9
 - Add progress display on wind bottle in process of wind essence
 - Add Echo Mining enchantment
+- Fix mining preview bug
+- Add many effects to whitelist of Cleanse, mainly effects from spells and equipments that applies to oneself
+- Add some magic mod damage type to magic tag
 
 2.5.8
 - Allow multi-recipe handling for burning item recipes, fix recipe conflict

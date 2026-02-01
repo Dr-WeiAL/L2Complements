@@ -5,6 +5,242 @@
     "minecraft:hero_of_the_village",
     "minecraft:dolphins_grace",
     "minecraft:conduit_power",
-    "minecraft:water_breathing"
+    "minecraft:water_breathing",
+    {
+      "id": "irons_spellbooks:angel_wings",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:evasion",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:heartstop",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:abyssal_shroud",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:ascension",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:charged",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:true_invisibility",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:fortify",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:spider_aspect",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:guided",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:airborne",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:vigor",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:oakskin",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:planar_sight",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:antigravity",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:hastened",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:burning_dash",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:gluttony",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:echoing_strikes",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:thunderstorm",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:volt_strike",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:frostbite",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:immolate",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:fall_damage_immunity",
+      "required": false
+    },
+    {
+      "id": "traveloptics:frozen_sight",
+      "required": false
+    },
+    {
+      "id": "traveloptics:vigor_siphon",
+      "required": false
+    },
+    {
+      "id": "traveloptics:abyssal_strike",
+      "required": false
+    },
+    {
+      "id": "traveloptics:assassin",
+      "required": false
+    },
+    {
+      "id": "traveloptics:lingering_strain",
+      "required": false
+    },
+    {
+      "id": "traveloptics:aerial_collapse_helper",
+      "required": false
+    },
+    {
+      "id": "traveloptics:spectral_blink",
+      "required": false
+    },
+    {
+      "id": "traveloptics:meteor_storm",
+      "required": false
+    },
+    {
+      "id": "traveloptics:reversal",
+      "required": false
+    },
+    {
+      "id": "traveloptics:consume",
+      "required": false
+    },
+    {
+      "id": "traveloptics:vortex_punch",
+      "required": false
+    },
+    {
+      "id": "traveloptics:casting",
+      "required": false
+    },
+    {
+      "id": "traveloptics:phantom_rage",
+      "required": false
+    },
+    {
+      "id": "traveloptics:spirit_damage_helper",
+      "required": false
+    },
+    {
+      "id": "traveloptics:replenish",
+      "required": false
+    },
+    {
+      "id": "traveloptics:jet_steam",
+      "required": false
+    },
+    {
+      "id": "traveloptics:tidal_grasp",
+      "required": false
+    },
+    {
+      "id": "traveloptics:floodgate",
+      "required": false
+    },
+    {
+      "id": "traveloptics:astral_path_reveal",
+      "required": false
+    },
+    {
+      "id": "traveloptics:astral_sense",
+      "required": false
+    },
+    {
+      "id": "traveloptics:astral_sense_treasure",
+      "required": false
+    },
+    {
+      "id": "traveloptics:crimson_descend",
+      "required": false
+    },
+    {
+      "id": "alshanex_familiars:bird_buff",
+      "required": false
+    },
+    {
+      "id": "cataclysm:monstrous",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ghost_form",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ghost_sickness",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:scrying",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:glide",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:flight",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:immolate",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:bounce",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:magic_find",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:suns_blessing",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:geomancy",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:sunblock",
+      "required": false
+    }
   ]
 }
