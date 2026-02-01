@@ -195,6 +195,70 @@
       "required": false
     },
     {
+      "id": "goety:summon_down",
+      "required": false
+    },
+    {
+      "id": "goety:charged",
+      "required": false
+    },
+    {
+      "id": "goety:buff",
+      "required": false
+    },
+    {
+      "id": "goety:rampage",
+      "required": false
+    },
+    {
+      "id": "goety:soul_armor",
+      "required": false
+    },
+    {
+      "id": "goety:iron_hide",
+      "required": false
+    },
+    {
+      "id": "goety:chill_hide",
+      "required": false
+    },
+    {
+      "id": "goety:shadow_walk",
+      "required": false
+    },
+    {
+      "id": "goety:soul_hunger",
+      "required": false
+    },
+    {
+      "id": "goety:electrified",
+      "required": false
+    },
+    {
+      "id": "goety:impaired",
+      "required": false
+    },
+    {
+      "id": "goety:tremor_sense",
+      "required": false
+    },
+    {
+      "id": "goety:wounded",
+      "required": false
+    },
+    {
+      "id": "goety:crippled",
+      "required": false
+    },
+    {
+      "id": "goety:tangled",
+      "required": false
+    },
+    {
+      "id": "goety:altruistic",
+      "required": false
+    },
+    {
       "id": "cataclysm:monstrous",
       "required": false
     },
@@ -240,6 +304,78 @@
     },
     {
       "id": "mowziesmobs:sunblock",
+      "required": false
+    },
+    {
+      "id": "supplementaries:overencumbered",
+      "required": false
+    },
+    {
+      "id": "confluence:gravitation",
+      "required": false
+    },
+    {
+      "id": "confluence:paladins_shield",
+      "required": false
+    },
+    {
+      "id": "confluence:cerebral_mindtrick",
+      "required": false
+    },
+    {
+      "id": "confluence:honey",
+      "required": false
+    },
+    {
+      "id": "tconstruct:returning",
+      "required": false
+    },
+    {
+      "id": "tconstruct:magnetic",
+      "required": false
+    },
+    {
+      "id": "tconstruct:self_destructing",
+      "required": false
+    },
+    {
+      "id": "tconstruct:carry",
+      "required": false
+    },
+    {
+      "id": "tconstruct:teleport_cooldown",
+      "required": false
+    },
+    {
+      "id": "tconstruct:fireball_cooldown",
+      "required": false
+    },
+    {
+      "id": "tconstruct:calcified",
+      "required": false
+    },
+    {
+      "id": "tconstruct:momentum_harvest",
+      "required": false
+    },
+    {
+      "id": "tconstruct:momentum_ranged",
+      "required": false
+    },
+    {
+      "id": "tconstruct:momentum_armor",
+      "required": false
+    },
+    {
+      "id": "tconstruct:insatiable_melee",
+      "required": false
+    },
+    {
+      "id": "tconstruct:insatiable_ranged",
+      "required": false
+    },
+    {
+      "id": "tconstruct:insatiable_armor",
       "required": false
     }
   ]

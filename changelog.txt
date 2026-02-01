@@ -1,4 +1,4 @@
-2.5.9
+2.5.10
 - Add progress display on wind bottle in process of wind essence
 - Add Echo Mining enchantment
 - Fix mining preview bug
