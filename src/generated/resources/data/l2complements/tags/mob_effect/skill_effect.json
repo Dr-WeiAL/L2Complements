@@ -191,15 +191,31 @@
       "required": false
     },
     {
+      "id": "gtbcs_geomancy_plus:solar_storm",
+      "required": false
+    },
+    {
+      "id": "gtbcs_geomancy_plus:tremor_step_effect",
+      "required": false
+    },
+    {
+      "id": "gtbcs_geomancy_plus:casting",
+      "required": false
+    },
+    {
+      "id": "gtbcs_geomancy_plus:aegis",
+      "required": false
+    },
+    {
+      "id": "gtbcs_geomancy_plus:seismic_ride_timer",
+      "required": false
+    },
+    {
       "id": "alshanex_familiars:bird_buff",
       "required": false
     },
     {
       "id": "goety:summon_down",
-      "required": false
-    },
-    {
-      "id": "goety:charged",
       "required": false
     },
     {
@@ -251,10 +267,6 @@
       "required": false
     },
     {
-      "id": "goety:tangled",
-      "required": false
-    },
-    {
       "id": "goety:altruistic",
       "required": false
     },
@@ -268,6 +280,10 @@
     },
     {
       "id": "cataclysm:ghost_sickness",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:summoning_sickness",
       "required": false
     },
     {
@@ -376,6 +392,14 @@
     },
     {
       "id": "tconstruct:insatiable_armor",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:nourishment",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:comfort",
       "required": false
     }
   ]
