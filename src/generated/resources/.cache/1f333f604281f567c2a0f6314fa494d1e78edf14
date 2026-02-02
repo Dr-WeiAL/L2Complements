@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-01T13:17:51.278678	Registrate Provider for l2complements [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects), Tags (traits), Patchouli Provider]
+// 1.20.1	2026-02-02T16:09:29.5078865	Registrate Provider for l2complements [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects), Tags (traits), Patchouli Provider]
 88a7338b7748dc865dfa6385e6ab8a7d8c51d9e5 assets/l2complements/blockstates/eternal_anvil.json
 a44dc95a8b23a9a3a34ebedf5c56b08dbde6cf0e assets/l2complements/blockstates/eternium_block.json
 896090a34932dc7eac905366381145086122a95d assets/l2complements/blockstates/poseidite_block.json
@@ -12,8 +12,8 @@ a45ee09acc262fd67be22de093136ad757f08e61 assets/l2complements/models/block/posei
 a52909a3a44a80695da32b5c3c5f931a0f72f74d assets/l2complements/models/block/sculkium_block.json
 2b0a9cfb2ad5a88e47ad24a3d5f79b837ec24e92 assets/l2complements/models/block/shulkerate_block.json
 84be2fe01f64330cbc578247711ac40172c51acf assets/l2complements/models/block/totemic_gold_block.json
-d058c1f716a936e0dff83f7a2d50ad49fab10f22 assets/l2complements/models/item/black_fire_charge.json
 2574e39f7737771709ad35bd91dbb95091717200 assets/l2complements/models/item/blackstone_core.json
+d058c1f716a936e0dff83f7a2d50ad49fab10f22 assets/l2complements/models/item/black_fire_charge.json
 87713a84b41607d4d6a9f3009ded23732960678c assets/l2complements/models/item/captured_shulker_bullet.json
 debd9b7eb7f11bf8efabb81e1505237434ed9f6b assets/l2complements/models/item/captured_wind.json
 4a8f29bb3be16fab44de47bbc1527a6c0ae363c7 assets/l2complements/models/item/cursed_droplet.json
@@ -93,8 +93,6 @@ c9072cda57e02aaf67812107d757c254be2dd273 assets/l2complements/models/item/soul_f
 e2a166999aaf23186a569a4bf40e44d29ca13089 assets/l2complements/models/item/storm_core.json
 922656abaef6ba86d31b8cd728d51476e37df34b assets/l2complements/models/item/strong_fire_charge.json
 be06b3fccfed82cf4c1f69ea205f05371c8629e3 assets/l2complements/models/item/sun_membrane.json
-eb56cc8b46316da7bd682b1814dfe71ba3a177f5 assets/l2complements/models/item/totem_of_dream.json
-850184117075286c4ced5fe50577a1779b4d9689 assets/l2complements/models/item/totem_of_the_sea.json
 9b023f9531ec2cdcf2f9413826531a9aac8406a1 assets/l2complements/models/item/totemic_apple.json
 72e6f9a0fc0d92ea09aca880509808e46c72f3fc assets/l2complements/models/item/totemic_carrot.json
 4e99c653f2f8febd65ab96c62ac1378268ccfb9e assets/l2complements/models/item/totemic_gold_axe.json
@@ -109,6 +107,8 @@ e50de220feb2811f99efe92c794c3da4bd2e5767 assets/l2complements/models/item/totemi
 28d9f8f68cceeb0e9093f5bacfd8553d55fb440f assets/l2complements/models/item/totemic_gold_pickaxe.json
 add601d1422a9cfeb159501fce21ef49d3241f46 assets/l2complements/models/item/totemic_gold_shovel.json
 f2bed6f2f6ac106334a113f4cedef4cb8be322d2 assets/l2complements/models/item/totemic_gold_sword.json
+eb56cc8b46316da7bd682b1814dfe71ba3a177f5 assets/l2complements/models/item/totem_of_dream.json
+850184117075286c4ced5fe50577a1779b4d9689 assets/l2complements/models/item/totem_of_the_sea.json
 4c6e01cc3fc06a57fc46b3b39dc330ce31b05681 assets/l2complements/models/item/void_eye.json
 41d0259e5a214bd80a27be90dbc2ec142fe7a367 assets/l2complements/models/item/warden_bone_shard.json
 ea0f2e6ba9ca3a87c8e7e75860e1e01eb421eedd assets/l2complements/models/item/wind_capture_bottle.json
@@ -237,11 +237,11 @@ d560d560c9fc64ccb7e87767669aae6eef8148c1 data/l2complements/advancements/recipes
 8cc478d0cc32f68427689ca2b2215c0b4d0aa682 data/l2complements/advancements/recipes/misc/craft/sonic_shooter.json
 da681bbf033a4fd45c610abeee7e8c6fa80c17e1 data/l2complements/advancements/recipes/misc/craft/soul_fire_charge.json
 e816363b157f54c112146800668ffe9685c0d6a0 data/l2complements/advancements/recipes/misc/craft/strong_fire_charge.json
+d990fee5ccfbc0caf9aa06a429af5f13edf3d769 data/l2complements/advancements/recipes/misc/craft/totemic_apple.json
+0e9a228055d21836a4ff8125fb02ecb69fe433c5 data/l2complements/advancements/recipes/misc/craft/totemic_carrot.json
 a3fdaa595423f7a9fc789c21f32824e4118c294e data/l2complements/advancements/recipes/misc/craft/totem_of_dream.json
 09e93fdf83c0de96c49e13e615a6bd83021c1b8c data/l2complements/advancements/recipes/misc/craft/totem_of_the_sea.json
 3d85c4f5203505160eb7d517c5bcb49896b6dc17 data/l2complements/advancements/recipes/misc/craft/totem_of_undying.json
-d990fee5ccfbc0caf9aa06a429af5f13edf3d769 data/l2complements/advancements/recipes/misc/craft/totemic_apple.json
-0e9a228055d21836a4ff8125fb02ecb69fe433c5 data/l2complements/advancements/recipes/misc/craft/totemic_carrot.json
 bd75b1e2419063e2d0f5cee9c2c1b042e68829f9 data/l2complements/advancements/recipes/misc/craft/trident.json
 02e34914d6e67eb896889a7856b4698317b4a187 data/l2complements/advancements/recipes/misc/craft/warden_bone_shard.json
 473c7f81cc14aeace717f35d8fc8a455e724f4d4 data/l2complements/advancements/recipes/misc/craft/wind_capture_bottle.json
@@ -484,11 +484,11 @@ ebace5b660f41a2b4507dc30d9f27810f538402c data/l2complements/recipes/craft/sculki
 796c82a3fc4541ce0dc92f2b3e19f93840cc3813 data/l2complements/recipes/craft/sonic_shooter.json
 d7dc6222a9b3f929a0c774e6c87f5091cb798fb5 data/l2complements/recipes/craft/soul_fire_charge.json
 90b2eb7e5f84c51a59026f81a84b2775e77ab63e data/l2complements/recipes/craft/strong_fire_charge.json
+c995cb543fb3b57ceab47454536ab977f419120f data/l2complements/recipes/craft/totemic_apple.json
+67cde8645bb3ee44afec9b5fbdef3142ff7aa4ce data/l2complements/recipes/craft/totemic_carrot.json
 9d41a907fd2498f227ccee1e26ec907a5f4e09ff data/l2complements/recipes/craft/totem_of_dream.json
 98dd44df59dec504c23500aa84b036a28c48dab8 data/l2complements/recipes/craft/totem_of_the_sea.json
 af01a12181a811846621343bd9c93c1113cbdfad data/l2complements/recipes/craft/totem_of_undying.json
-c995cb543fb3b57ceab47454536ab977f419120f data/l2complements/recipes/craft/totemic_apple.json
-67cde8645bb3ee44afec9b5fbdef3142ff7aa4ce data/l2complements/recipes/craft/totemic_carrot.json
 5c7c2b793dda8b64380a200ed27d776d315f5058 data/l2complements/recipes/craft/trident.json
 c51e8d7027a0b98d7c2b58ef2cdcbcb4f88be73e data/l2complements/recipes/craft/warden_bone_shard.json
 97b00b959d06a5d077316b5d35da62dc6d836491 data/l2complements/recipes/craft/wind_capture_bottle.json
@@ -814,7 +814,7 @@ bfdfab925d3aae515709e426b963be6ae6fc0d4b data/l2complements/tags/blocks/requires
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/l2complements/tags/enchantment/chain_digging.json
 d0d10d015074535d1001cbc559ccc2e5681a8fa2 data/l2complements/tags/items/delicate_bone.json
 9f1119c6fdd4c13eac16f64322754cb3c4c99bf1 data/l2complements/tags/items/l2c_legendary.json
-b7f48821d4cfa9fda35b38e4c78694c20b365176 data/l2complements/tags/mob_effect/skill_effect.json
+3672d81267f6b2482c0e1d48b3574c83f3385a38 data/l2complements/tags/mob_effect/skill_effect.json
 cf509c1d1a3e8723412cdd8e690e6cc0ef53b72b data/l2library/tags/mob_effect/tracked_effects.json
 e37ba910b8c93bc8d4baf7b90643a6b16e56e0bb data/l2screentracker/tags/items/quick_access_vanilla.json
 e37ba910b8c93bc8d4baf7b90643a6b16e56e0bb data/minecraft/tags/blocks/anvil.json
@@ -827,8 +827,8 @@ e37ba910b8c93bc8d4baf7b90643a6b16e56e0bb data/minecraft/tags/items/anvil.json
 f7ab431f322b795b1fc9fbb914eb6aceca6aeb50 data/minecraft/tags/items/pickaxes.json
 d19ab7ba64367c164ddcf3701466affbdb2a0696 data/minecraft/tags/items/shovels.json
 ffafe5187c5335776931d711661d66d6648bd197 data/minecraft/tags/items/swords.json
-5e49934bebf32310486d03d5092a61b18f44cdd5 data/minecraft/tags/items/trim_materials.json
 8dfa95c4fbc2acb115714fc7f071fb14b931b5e5 data/minecraft/tags/items/trimmable_armor.json
+5e49934bebf32310486d03d5092a61b18f44cdd5 data/minecraft/tags/items/trim_materials.json
 b376083721f28306ed48a8752be7f13fd2bb0d3c data/modulargolems/tags/items/sculk_materials.json
 8c79cc8b251cc60f27a9a722af6f1b61073261ec data/twilightforest/tags/items/banned_uncraftables.json
 fdc504265c73665e2952b114a767cbe1cfea025a data/twilightforest/tags/items/banned_uncrafting_ingredients.json
