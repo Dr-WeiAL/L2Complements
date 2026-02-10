@@ -626,6 +626,15 @@ public class RecipeGen {
 						.define('E', Items.IRON_INGOT)
 						.save(pvd, getID(LCEnchantments.PLANE.get()));
 
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.SMART_PLANE.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
+						.pattern("ECE").pattern("DAD").pattern("BBB")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
+						.define('B', Items.GOLDEN_HOE)
+						.define('C', LCItems.STORM_CORE.get())
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.REDSTONE)
+						.save(pvd, getID(LCEnchantments.SMART_PLANE.get()));
+
 				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.DRILL.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
 						.pattern("ECB").pattern("DAB").pattern("EDB")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))

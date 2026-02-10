@@ -1,12 +1,12 @@
-// 1.20.1	2026-02-10T14:24:45.135584	Registrate Provider for l2complements [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects), Patchouli Provider, Tags (traits)]
+// 1.20.1	2026-02-10T15:02:33.266393	Registrate Provider for l2complements [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects), Tags (traits), Patchouli Provider]
 88a7338b7748dc865dfa6385e6ab8a7d8c51d9e5 assets/l2complements/blockstates/eternal_anvil.json
 a44dc95a8b23a9a3a34ebedf5c56b08dbde6cf0e assets/l2complements/blockstates/eternium_block.json
 896090a34932dc7eac905366381145086122a95d assets/l2complements/blockstates/poseidite_block.json
 b2a769b51ddce14c173a64b5457cccb4d8ef6a45 assets/l2complements/blockstates/sculkium_block.json
 2b88df6f8b01f3c72273ce13dbcb556f7dab321d assets/l2complements/blockstates/shulkerate_block.json
 65262ae0f886f61c163059f15c2ad1a7ba9c264a assets/l2complements/blockstates/totemic_gold_block.json
-99b24ac8a4bfff211dd52c859368607fa8babe34 assets/l2complements/lang/en_ud.json
-f78bf7a1dbcd741085ffb9e4aa74c0e9e1f8c7aa assets/l2complements/lang/en_us.json
+6a41b937ef90efb19278da0519dc040a177577ff assets/l2complements/lang/en_ud.json
+e86b2c9222800bc666bab9642a570aac82bfb20f assets/l2complements/lang/en_us.json
 bb63c088704d714f1763cb16cec8af6cd1006d66 assets/l2complements/models/block/eternium_block.json
 a45ee09acc262fd67be22de093136ad757f08e61 assets/l2complements/models/block/poseidite_block.json
 a52909a3a44a80695da32b5c3c5f931a0f72f74d assets/l2complements/models/block/sculkium_block.json
@@ -211,6 +211,7 @@ b7508b35781c0f0d9e03104161d544ce908684ac data/l2complements/advancements/recipes
 45a8fd49ef7264db57dc2a11a4740cf389ec582e data/l2complements/advancements/recipes/enchantments/enchantments/sharp_blade.json
 040c1f15003da5491d0f89d85909fe3b29fba7ea data/l2complements/advancements/recipes/enchantments/enchantments/shinny.json
 ce504d50599a19bd42757f8fe7b7c292e4d5652a data/l2complements/advancements/recipes/enchantments/enchantments/shulker_armor.json
+03fe07ca91301cab4d3c31a6b3362c9f835c60c6 data/l2complements/advancements/recipes/enchantments/enchantments/smart_plane_digging.json
 fd018a60101acbe7844635afc229577c30d4f5a0 data/l2complements/advancements/recipes/enchantments/enchantments/smelt.json
 30ca2342b7181e4d9c5097e75f39efea14470c63 data/l2complements/advancements/recipes/enchantments/enchantments/snow_walker.json
 5cd266a18c2b5bef89b04f757c28b34c9f6419ce data/l2complements/advancements/recipes/enchantments/enchantments/soul_bound.json
@@ -587,6 +588,8 @@ ba58d3698f8dd8410d75e46dcd80873188906460 data/l2complements/recipes/enchantments
 92c0fd17511216cfaa021293a7b38eb15b5b6813 data/l2complements/recipes/enchantments/shinny_ars.json
 6b2d680c50079cf849ee795c501cac2f74dbb1c3 data/l2complements/recipes/enchantments/shulker_armor.json
 699be59caaf09a599f13dd53f464ae11585ac22d data/l2complements/recipes/enchantments/shulker_armor_ars.json
+808ad7f8052e408b5fe35f3807077c3276abf3e2 data/l2complements/recipes/enchantments/smart_plane_digging.json
+05756563b53f42836a7740c3a5879dc8716565ce data/l2complements/recipes/enchantments/smart_plane_digging_ars.json
 aaa45c6ffdc25f28834576d7a571daef4e7f339a data/l2complements/recipes/enchantments/smelt.json
 dabcdeb3b74634fd27bbebdd554f8afa933e9e55 data/l2complements/recipes/enchantments/smelt_ars.json
 4bdcf6b36891917a7c8e1f087778ad877d44ef15 data/l2complements/recipes/enchantments/snow_walker.json

@@ -66,6 +66,8 @@
 		"drill_digging.desc": "一次挖掘%1$s个方块",
 		"plane_digging": "平面挖掘连锁",
 		"plane_digging.desc": "挖掘%1$sx%1$s范围",
+		"smart_plane_digging": "智能平面挖掘连锁",
+		"smart_plane_digging.desc": "挖掘相连的暴露平面，至多%1$sx%1$s格",
 		"tree_chopping": "砍树",
 		"tree_chopping.desc": "一次采集一整棵树",
 		"vien_mining": "连锁采集",

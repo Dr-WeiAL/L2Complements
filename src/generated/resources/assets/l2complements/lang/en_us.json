@@ -92,6 +92,8 @@
   "enchantment.l2complements.shinny.desc": "Piglins loves it.",
   "enchantment.l2complements.shulker_armor": "Transparent",
   "enchantment.l2complements.shulker_armor.desc": "Armor invisible to mobs and players when wearer has invisibility effect.",
+  "enchantment.l2complements.smart_plane_digging": "Smart Plane Digging",
+  "enchantment.l2complements.smart_plane_digging.desc": "Dig 1 layer of connected exposed face at once, up tp %1$sx%1$s blocks",
   "enchantment.l2complements.smelt": "Smelt",
   "enchantment.l2complements.smelt.desc": "Smelt mined items and mob drops if possible, including items in chests!",
   "enchantment.l2complements.snow_walker": "Snow Walker",

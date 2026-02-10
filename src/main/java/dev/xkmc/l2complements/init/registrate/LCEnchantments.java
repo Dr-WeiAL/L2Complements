@@ -53,7 +53,7 @@ public class LCEnchantments {
 	public static final RegistryEntry<DurableArmorEnchantment> DURABLE_ARMOR;
 	public static final RegistryEntry<VoidTouchEnchantment> VOID_TOUCH;
 
-	public static final RegistryEntry<RangeDiggingEnchantment> CUBIC, PLANE, DRILL, VIEN, ECHO, TREE,
+	public static final RegistryEntry<RangeDiggingEnchantment> CUBIC, PLANE, SMART_PLANE, DRILL, VIEN, ECHO, TREE,
 			CHUNK_CUBIC, CHUNK_PLANE;
 
 	static {
@@ -194,6 +194,13 @@ public class LCEnchantments {
 					"Dig %1$sx%1$s blocks at once")
 					.addSlots(EquipmentSlot.MAINHAND)
 					.rarity(Enchantment.Rarity.VERY_RARE).lang("Plane Digging")
+					.register();
+
+			SMART_PLANE = reg("smart_plane_digging", EnchantmentCategory.DIGGER, (r, c, s) ->
+							new RangeDiggingEnchantment(new SmartPlaneBlockBreaker(2), r, c, s),
+					"Dig 1 layer of connected exposed face at once, up tp %1$sx%1$s blocks")
+					.addSlots(EquipmentSlot.MAINHAND)
+					.rarity(Enchantment.Rarity.VERY_RARE).lang("Smart Plane Digging")
 					.register();
 
 			DRILL = reg("drill_digging", EnchantmentCategory.DIGGER, (r, c, s) ->
