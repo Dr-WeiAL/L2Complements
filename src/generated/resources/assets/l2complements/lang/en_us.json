@@ -319,6 +319,7 @@
   "l2complements.tooltip.misc.charge_throw": "Right click to throw at target",
   "l2complements.tooltip.misc.diffusion_wand": "Right click a block of gem/dust to diffuse it into nearby stones to create ore. Check JEI for recipe",
   "l2complements.tooltip.misc.effect_charge": "Apply on Hit: %s",
+  "l2complements.tooltip.misc.eternal_anvil": "Does not consume player xp on all operations. Output has no repair penalty.",
   "l2complements.tooltip.misc.explosion_charge": "Create explosion of level %s on Hit",
   "l2complements.tooltip.misc.explosion_shard": "Obtained by surviving an explosion damage of at least %s.",
   "l2complements.tooltip.misc.float": "This item will float in the air.",

@@ -1,6 +1,7 @@
 package dev.xkmc.l2complements.init.registrate;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
+import dev.xkmc.l2complements.content.item.anvil.EternalAnvilBlock;
 import dev.xkmc.l2complements.init.L2Complements;
 import dev.xkmc.l2complements.init.materials.LCMats;
 import net.minecraft.resources.ResourceLocation;
@@ -16,8 +17,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
  */
 public class LCBlocks {
 
-	public static final BlockEntry<AnvilBlock> ETERNAL_ANVIL = L2Complements.REGISTRATE
-			.block("eternal_anvil", p -> new AnvilBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)))
+	public static final BlockEntry<EternalAnvilBlock> ETERNAL_ANVIL = L2Complements.REGISTRATE
+			.block("eternal_anvil", p -> new EternalAnvilBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)))
 			.blockstate((ctx, pvd) -> pvd.horizontalBlock(ctx.getEntry(), pvd.models().getExistingFile(
 					new ResourceLocation(L2Complements.MODID, "eternal_anvil")), 90))
 			.tag(BlockTags.ANVIL, BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_STONE_TOOL)

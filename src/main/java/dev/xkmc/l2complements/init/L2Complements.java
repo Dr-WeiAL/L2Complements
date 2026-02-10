@@ -6,6 +6,7 @@ import com.tterrag.registrate.providers.ProviderType;
 import dev.xkmc.l2complements.compat.forbidden.FaARecipe;
 import dev.xkmc.l2complements.content.client.SpeedTrackerPacket;
 import dev.xkmc.l2complements.content.enchantment.special.SoulBoundPlayerData;
+import dev.xkmc.l2complements.content.item.anvil.EternalAnvilMenu;
 import dev.xkmc.l2complements.content.item.wand.WandEffectToClient;
 import dev.xkmc.l2complements.events.L2ComplementsClick;
 import dev.xkmc.l2complements.events.MaterialDamageListener;
@@ -19,7 +20,6 @@ import dev.xkmc.l2damagetracker.contents.materials.vanilla.GenItemVanillaType;
 import dev.xkmc.l2library.base.L2Registrate;
 import dev.xkmc.l2library.serial.config.PacketHandlerWithConfig;
 import dev.xkmc.l2screentracker.click.quickaccess.DefaultQuickAccessActions;
-import dev.xkmc.l2screentracker.compat.arclight.AnvilMenuArclight;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -86,7 +86,7 @@ public class L2Complements {
 			DispenserBlock.registerBehavior(LCItems.STRONG_CHARGE.get(), LCItems.STRONG_CHARGE.get().new FireChargeBehavior());
 			DispenserBlock.registerBehavior(LCItems.BLACK_CHARGE.get(), LCItems.BLACK_CHARGE.get().new FireChargeBehavior());
 
-			DefaultQuickAccessActions.quickAccess(MenuType.ANVIL, LCBlocks.ETERNAL_ANVIL.asItem(), AnvilMenuArclight::new, "container.repair");
+			DefaultQuickAccessActions.quickAccess(MenuType.ANVIL, LCBlocks.ETERNAL_ANVIL.asItem(), EternalAnvilMenu::createFloating, "container.repair");
 		});
 	}
 
@@ -112,7 +112,7 @@ public class L2Complements {
 	}
 
 	@SubscribeEvent(priority = EventPriority.LOW)
-	public static void gatherDataAfter(GatherDataEvent event){
+	public static void gatherDataAfter(GatherDataEvent event) {
 		boolean run = event.includeServer();
 		var gen = event.getGenerator();
 		PackOutput output = gen.getPackOutput();
