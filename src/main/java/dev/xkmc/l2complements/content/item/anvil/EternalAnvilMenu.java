@@ -1,9 +1,11 @@
 package dev.xkmc.l2complements.content.item.anvil;
 
+import dev.xkmc.l2complements.init.registrate.LCBlocks;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AnvilMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 
 public class EternalAnvilMenu extends AnvilMenu {
@@ -16,8 +18,17 @@ public class EternalAnvilMenu extends AnvilMenu {
 
 	private boolean floating = false;
 
+	public EternalAnvilMenu(MenuType<AnvilMenu> type, int id, Inventory inv) {
+		super(id, inv);
+	}
+
 	public EternalAnvilMenu(int id, Inventory inv, ContainerLevelAccess access) {
 		super(id, inv, access);
+	}
+
+	@Override
+	public MenuType<?> getType() {
+		return LCBlocks.ETERNAL_ANVIL_MENU.get();
 	}
 
 	protected void onTake(Player pl, ItemStack stack) {

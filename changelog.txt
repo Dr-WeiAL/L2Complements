@@ -1,8 +1,8 @@
 2.6.0
 - Add 4 smithing templates
-?- Add 2 upgraded version of wands
+- Add 2 upgraded version of wands
 - Make warp stone cheaper, echo mining more expensive
-?- Add cool down for sonic shooter
+- Add cool down for sonic shooter
 - Make eternium cheaper
 
 2.5.10
