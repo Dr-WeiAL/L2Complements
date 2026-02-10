@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
@@ -23,11 +24,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HellfireWand extends WandItem {
+public class HeliosScepter extends WandItem {
 
-	public static final int RANGE = 64, CHARGE = 200, SIZE = 10;
+	public static final int RANGE = 64, CHARGE = 60, SIZE = 10;
 
-	public HellfireWand(Properties properties) {
+	public HeliosScepter(Properties properties) {
 		super(properties);
 	}
 
@@ -49,16 +50,17 @@ public class HellfireWand extends WandItem {
 	}
 
 	public static void renderRegionServer(LivingEntity user, Vec3 center, int time) {
-		WandEffectToClient.Type.HELLFIRE_TICK.send(user, center, time);
+		WandEffectToClient.Type.HELIOS_TICK.send(user, center, time);
 	}
 
 	public static void renderRegionClient(Level level, Vec3 center, int time) {
 		double radius = Math.min(CHARGE, time) * 1.0 * SIZE / CHARGE;
-		for (int i = 0; i < 5; i++) {
+		int n = Mth.clamp(time, 5, 20);
+		for (int i = 0; i < n; i++) {
 			float tpi = (float) (Math.PI * 2);
 			Vec3 v0 = new Vec3(0, radius, 0);
 			v0 = v0.xRot(tpi / 4).yRot(level.getRandom().nextFloat() * tpi);
-			level.addAlwaysVisibleParticle(time > 60 && i <= 1 ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME,
+			level.addAlwaysVisibleParticle(time > 20 && i <= n / 4 ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME,
 					center.x + v0.x,
 					center.y + v0.y + 0.5f,
 					center.z + v0.z,
@@ -67,8 +69,8 @@ public class HellfireWand extends WandItem {
 	}
 
 	public static void trigger(LivingEntity user, ServerLevel sl, Vec3 center, int time) {
-		WandEffectToClient.Type.HELLFIRE_TRIGGER.send(user, center, time);
-		float damage = LCConfig.COMMON.hellfireWandDamage.get() * Math.min(3, time / 20f);
+		WandEffectToClient.Type.HELIOS_TRIGGER.send(user, center, time);
+		float damage = LCConfig.COMMON.scepterOfHeliosDamage.get() * Math.min(1, time / 20f);
 		double radius = Math.min(CHARGE, time) * 1.0 * SIZE / CHARGE;
 		for (var e : sl.getEntities(user, AABB.ofSize(center.add(0, radius, 0),
 				radius * 2, radius * 2, radius * 2))) {
@@ -79,30 +81,34 @@ public class HellfireWand extends WandItem {
 		}
 	}
 
-	public static void renderPentagonClient(Level level, Vec3 center, int time) {
+	public static void renderHexagonClient(Level level, Vec3 center, int time) {
 		level.playSound(null, center.x, center.y, center.z, SoundEvents.FIRECHARGE_USE, SoundSource.PLAYERS, 3.0F, 1.0F);
 		double radius = Math.min(CHARGE, time) * 1.0 * SIZE / CHARGE;
-		double side = 1.644;
+		double side = 1.732;
 		double perimeter = Math.PI * 2;
-		double total = side * 5 + perimeter;
-		int size = time * 2;
+		double total = side * 3 + perimeter;
+		int size = time * 7;
 		for (int i = 0; i < size; i++) {
 			double perc = i * 1.0 / size * total;
 			Vec3 v0;
-			if (perc < side * 5) {
+			if (perc < side * 3) {
 				int start = (int) Math.floor(perc / side);
 				Vec3 tip = new Vec3(0, radius, 0);
-				tip = tip.xRot((float) (Math.PI / 2)).yRot((float) (Math.PI * 4 / 5 * start));
-				Vec3 next = tip.yRot((float) (Math.PI * 4 / 5));
+				tip = tip.xRot((float) (Math.PI / 2)).yRot((float) (Math.PI * 2 / 3 * start));
+				Vec3 next = tip.yRot((float) (Math.PI * 2 / 3));
 				v0 = tip.add(next.subtract(tip).scale(perc / side - start));
-				level.addAlwaysVisibleParticle(ParticleTypes.SOUL,
+				level.addAlwaysVisibleParticle(ParticleTypes.SOUL_FIRE_FLAME,
 						center.x + v0.x,
 						center.y + v0.y + 0.5,
 						center.z + v0.z, 0, 1, 0);
+				level.addAlwaysVisibleParticle(ParticleTypes.FLAME,
+						center.x - v0.x,
+						center.y + v0.y + 0.5,
+						center.z - v0.z, 0, 1, 0);
 			} else {
 				v0 = new Vec3(0, radius, 0);
-				v0 = v0.xRot((float) (Math.PI / 2)).yRot((float) (perc - side * 5));
-				level.addAlwaysVisibleParticle(ParticleTypes.SOUL_FIRE_FLAME,
+				v0 = v0.xRot((float) (Math.PI / 2)).yRot((float) (perc - side * 3));
+				level.addAlwaysVisibleParticle(ParticleTypes.FLAME,
 						center.x + v0.x,
 						center.y + v0.y + 0.5,
 						center.z + v0.z, 0, 1, 0);

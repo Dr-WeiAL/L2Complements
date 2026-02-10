@@ -53,7 +53,10 @@ public class LCConfig {
 		public final ForgeConfigSpec.DoubleValue emeraldDamageFactor;
 		public final ForgeConfigSpec.IntValue emeraldBaseRange;
 		public final ForgeConfigSpec.IntValue sonicShooterDamage;
+		public final ForgeConfigSpec.IntValue sonicShooterCooldown;
 		public final ForgeConfigSpec.IntValue hellfireWandDamage;
+		public final ForgeConfigSpec.IntValue scepterOfHeliosDamage;
+		public final ForgeConfigSpec.IntValue scepterOfBoreasDamage;
 
 		public final ForgeConfigSpec.IntValue iceEnchantDuration;
 		public final ForgeConfigSpec.IntValue flameEnchantDuration;
@@ -147,8 +150,14 @@ public class LCConfig {
 						.defineInRange("emeraldBaseRange", 10, 1, 100);
 				sonicShooterDamage = builder.comment("Sonic Shooter Damage")
 						.defineInRange("sonicShooterDamage", 10, 1, 1000);
+				sonicShooterCooldown = builder.comment("Sonic Shooter Cooldown")
+						.defineInRange("sonicShooterCooldown", 20, 1, 1000);
 				hellfireWandDamage = builder.comment("Hellfire Wand Damage per second charged (max 3 seconds charged)")
 						.defineInRange("hellfireWandDamage", 10, 1, 1000);
+				scepterOfHeliosDamage = builder.comment("Scepter of Helios Damage per second charged (max 1 seconds charged)")
+						.defineInRange("scepterOfHeliosDamage", 20, 1, 1000);
+				scepterOfBoreasDamage = builder.comment("Scepter of Boreas (4 hits per seconds)")
+						.defineInRange("scepterOfBoreasDamage", 5, 1, 1000);
 				iceEnchantDuration = builder.comment("Base duration for iceBlade")
 						.defineInRange("iceEnchantDuration", 100, 1, 10000);
 				flameEnchantDuration = builder.comment("Duration for flameBlade")

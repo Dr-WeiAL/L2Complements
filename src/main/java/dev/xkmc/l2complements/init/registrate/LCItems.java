@@ -10,10 +10,7 @@ import dev.xkmc.l2complements.content.item.create.RefinedRadianceItem;
 import dev.xkmc.l2complements.content.item.create.VoidEyeItem;
 import dev.xkmc.l2complements.content.item.misc.*;
 import dev.xkmc.l2complements.content.item.misc.FireChargeItem;
-import dev.xkmc.l2complements.content.item.wand.DiffusionWand;
-import dev.xkmc.l2complements.content.item.wand.HellfireWand;
-import dev.xkmc.l2complements.content.item.wand.SonicShooter;
-import dev.xkmc.l2complements.content.item.wand.WinterStormWand;
+import dev.xkmc.l2complements.content.item.wand.*;
 import dev.xkmc.l2complements.events.MaterialDamageListener;
 import dev.xkmc.l2complements.init.L2Complements;
 import dev.xkmc.l2complements.init.data.LCConfig;
@@ -97,8 +94,10 @@ public class LCItems {
 	public static final ItemEntry<FireChargeItem<BlackFireball>> BLACK_CHARGE;
 
 	public static final ItemEntry<SonicShooter> SONIC_SHOOTER;
-	public static final ItemEntry<HellfireWand> HELLFIRE_WAND, HELIOS_SCEPTER;
-	public static final ItemEntry<WinterStormWand> WINTERSTORM_WAND, BOREAS_CEEPTER;
+	public static final ItemEntry<HellfireWand> HELLFIRE_WAND;
+	public static final ItemEntry<HeliosScepter> HELIOS_SCEPTER;
+	public static final ItemEntry<WinterStormWand> WINTERSTORM_WAND;
+	public static final ItemEntry<BoreasScepter> BOREAS_CEEPTER;
 	public static final ItemEntry<DiffusionWand> DIFFUSION_WAND;
 
 	public static final ItemEntry<Item> TOTEMIC_CARROT, TOTEMIC_APPLE, SWAP_TEMPLATE, ETERNAL_TEMPLATE, ICE_TEMPLATE, FIRE_TEMPLATE;
@@ -188,7 +187,7 @@ public class LCItems {
 					.defaultModel().defaultLang().register();
 
 			SONIC_SHOOTER = REGISTRATE.item("sonic_shooter", p ->
-							new SonicShooter(p.durability(64).fireResistant().rarity(Rarity.EPIC)))
+							new SonicShooter(p.durability(256).fireResistant().rarity(Rarity.EPIC)))
 					.model((ctx, pvd) -> {
 								var parent = new ModelFile.UncheckedModelFile(pvd.modLoc("item/gun"));
 								var base = pvd.getBuilder(ctx.getName()).parent(parent)
@@ -208,7 +207,7 @@ public class LCItems {
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
 			HELLFIRE_WAND = REGISTRATE.item("hellfire_wand", p ->
-							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.EPIC)))
+							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.RARE)))
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
 			WINTERSTORM_WAND = REGISTRATE.item("winterstorm_wand", p ->
@@ -216,12 +215,14 @@ public class LCItems {
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
 			HELIOS_SCEPTER = REGISTRATE.item("scepter_of_helios", p ->
-							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.EPIC)))
-					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
+							new HeliosScepter(p.durability(1024).fireResistant().rarity(Rarity.EPIC)))
+					.model((ctx, pvd) -> pvd.handheld(ctx))
+					.lang("Scepter of Helios").register();
 
 			BOREAS_CEEPTER = REGISTRATE.item("scepter_of_boreas", p ->
-							new WinterStormWand(p.durability(128).fireResistant().rarity(Rarity.RARE)))
-					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
+							new BoreasScepter(p.durability(1024).fireResistant().rarity(Rarity.EPIC)))
+					.model((ctx, pvd) -> pvd.handheld(ctx))
+					.lang("Scepter of Boreas").register();
 		}
 		{
 			TOTEMIC_CARROT = REGISTRATE.item("totemic_carrot", p -> new Item(p.food(
