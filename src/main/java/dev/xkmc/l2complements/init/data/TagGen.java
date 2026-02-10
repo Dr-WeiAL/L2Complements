@@ -107,9 +107,13 @@ public class TagGen {
 				.addOptional(new ResourceLocation("traveloptics", "astral_sense"))
 				.addOptional(new ResourceLocation("traveloptics", "astral_sense_treasure"))
 				.addOptional(new ResourceLocation("traveloptics", "crimson_descend"))
+				.addOptional(new ResourceLocation("gtbcs_geomancy_plus", "solar_storm"))
+				.addOptional(new ResourceLocation("gtbcs_geomancy_plus", "tremor_step_effect"))
+				.addOptional(new ResourceLocation("gtbcs_geomancy_plus", "casting"))
+				.addOptional(new ResourceLocation("gtbcs_geomancy_plus", "aegis"))
+				.addOptional(new ResourceLocation("gtbcs_geomancy_plus", "seismic_ride_timer"))
 				.addOptional(new ResourceLocation("alshanex_familiars", "bird_buff"))
 				.addOptional(new ResourceLocation("goety", "summon_down"))
-				.addOptional(new ResourceLocation("goety", "charged"))
 				.addOptional(new ResourceLocation("goety", "buff"))
 				.addOptional(new ResourceLocation("goety", "rampage"))
 				.addOptional(new ResourceLocation("goety", "soul_armor"))
@@ -122,11 +126,11 @@ public class TagGen {
 				.addOptional(new ResourceLocation("goety", "tremor_sense"))
 				.addOptional(new ResourceLocation("goety", "wounded"))
 				.addOptional(new ResourceLocation("goety", "crippled"))
-				.addOptional(new ResourceLocation("goety", "tangled"))
 				.addOptional(new ResourceLocation("goety", "altruistic"))
 				.addOptional(new ResourceLocation("cataclysm", "monstrous"))
 				.addOptional(new ResourceLocation("cataclysm", "ghost_form"))
 				.addOptional(new ResourceLocation("cataclysm", "ghost_sickness"))
+				.addOptional(new ResourceLocation("ars_nouveau", "summoning_sickness"))
 				.addOptional(new ResourceLocation("ars_nouveau", "scrying"))
 				.addOptional(new ResourceLocation("ars_nouveau", "glide"))
 				.addOptional(new ResourceLocation("ars_nouveau", "flight"))
@@ -153,7 +157,9 @@ public class TagGen {
 				.addOptional(new ResourceLocation("tconstruct", "momentum_armor"))
 				.addOptional(new ResourceLocation("tconstruct", "insatiable_melee"))
 				.addOptional(new ResourceLocation("tconstruct", "insatiable_ranged"))
-				.addOptional(new ResourceLocation("tconstruct", "insatiable_armor"));
+				.addOptional(new ResourceLocation("tconstruct", "insatiable_armor"))
+				.addOptional(new ResourceLocation("farmersdelight", "nourishment"))
+				.addOptional(new ResourceLocation("farmersdelight", "comfort"));
 		pvd.addTag(L2TagGen.TRACKED_EFFECTS).add(LCEffects.FLAME.get(), LCEffects.EMERALD.get(), LCEffects.ICE.get(),
 				LCEffects.STONE_CAGE.get(), LCEffects.BLEED.get(), LCEffects.CLEANSE.get(), LCEffects.CURSE.get());
 	}

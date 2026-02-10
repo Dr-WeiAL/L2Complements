@@ -10,6 +10,10 @@
 - Fix fire wand particle rendering at long distance
 - copy vanilla wither renderer into separate code to prevent mixins breaking force field rendering
 
+2.5.11
+- fix crash with Create 6.0.9
+- Continue to add whitelist of Cleanse
+
 2.5.10
 - Add progress display on wind bottle in process of wind essence
 - Add Echo Mining enchantment
