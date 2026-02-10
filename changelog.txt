@@ -1,4 +1,4 @@
-2.6.0
+2.6.1
 - Add 4 smithing templates
 - Add 2 upgraded version of wands
 - Add smart plane digging enchantment
