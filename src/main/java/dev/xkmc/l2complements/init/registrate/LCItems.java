@@ -8,8 +8,8 @@ import dev.xkmc.l2complements.content.entity.fireball.SoulFireball;
 import dev.xkmc.l2complements.content.entity.fireball.StrongFireball;
 import dev.xkmc.l2complements.content.item.create.RefinedRadianceItem;
 import dev.xkmc.l2complements.content.item.create.VoidEyeItem;
-import dev.xkmc.l2complements.content.item.misc.FireChargeItem;
 import dev.xkmc.l2complements.content.item.misc.*;
+import dev.xkmc.l2complements.content.item.misc.FireChargeItem;
 import dev.xkmc.l2complements.content.item.wand.DiffusionWand;
 import dev.xkmc.l2complements.content.item.wand.HellfireWand;
 import dev.xkmc.l2complements.content.item.wand.SonicShooter;
@@ -97,11 +97,11 @@ public class LCItems {
 	public static final ItemEntry<FireChargeItem<BlackFireball>> BLACK_CHARGE;
 
 	public static final ItemEntry<SonicShooter> SONIC_SHOOTER;
-	public static final ItemEntry<HellfireWand> HELLFIRE_WAND;
-	public static final ItemEntry<WinterStormWand> WINTERSTORM_WAND;
+	public static final ItemEntry<HellfireWand> HELLFIRE_WAND, HELIOS_SCEPTER;
+	public static final ItemEntry<WinterStormWand> WINTERSTORM_WAND, BOREAS_CEEPTER;
 	public static final ItemEntry<DiffusionWand> DIFFUSION_WAND;
 
-	public static final ItemEntry<Item> TOTEMIC_CARROT, TOTEMIC_APPLE;
+	public static final ItemEntry<Item> TOTEMIC_CARROT, TOTEMIC_APPLE, SWAP_TEMPLATE, ETERNAL_TEMPLATE, ICE_TEMPLATE, FIRE_TEMPLATE;
 	public static final ItemEntry<EnchantedGoldenAppleItem> ENCHANT_TOTEMIC_CARROT, ENCHANTED_TOTEMIC_APPLE;
 
 	public static final ItemEntry<Item>[] MAT_INGOTS, MAT_NUGGETS;
@@ -142,12 +142,18 @@ public class LCItems {
 					Rarity.RARE, LangData.IDS.PIGLIN_RUNE::get);
 		}
 		{
+			SWAP_TEMPLATE = REGISTRATE.item("material_swap_smithing_template", Item::new).defaultLang().register();
+			ETERNAL_TEMPLATE = REGISTRATE.item("eternal_upgrade_smithing_template", Item::new).defaultLang().register();
+			ICE_TEMPLATE = REGISTRATE.item("frost_upgrade_smithing_template", Item::new).defaultLang().register();
+			FIRE_TEMPLATE = REGISTRATE.item("flame_upgrade_smithing_template", Item::new).defaultLang().register();
+		}
+		{
 			FRAGILE_WARP_STONE = REGISTRATE.item("fragile_warp_stone", p ->
 							new WarpStone(p.fireResistant().stacksTo(1).rarity(Rarity.RARE), true))
-					.defaultModel().defaultLang().register();
+					.defaultModel().defaultLang().removeTab(TAB_ITEM.getKey()).register();
 			REINFORCED_WARP_STONE = REGISTRATE.item("reinforced_warp_stone", p ->
 							new WarpStone(p.fireResistant().stacksTo(1).durability(64).rarity(Rarity.RARE), false))
-					.defaultModel().defaultLang().register();
+					.defaultModel().lang("Warp Stone").register();
 
 			TagKey<Item> charm = ItemTags.create(new ResourceLocation("curios", "charm"));
 
@@ -197,15 +203,23 @@ public class LCItems {
 							}
 					).defaultLang().register();
 
-			HELLFIRE_WAND = REGISTRATE.item("hellfire_wand", p ->
-							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.EPIC)))
-					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
-
 			DIFFUSION_WAND = REGISTRATE.item("diffusion_wand", p ->
 							new DiffusionWand(p.durability(8).fireResistant().rarity(Rarity.RARE)))
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
+			HELLFIRE_WAND = REGISTRATE.item("hellfire_wand", p ->
+							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.EPIC)))
+					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
+
 			WINTERSTORM_WAND = REGISTRATE.item("winterstorm_wand", p ->
+							new WinterStormWand(p.durability(128).fireResistant().rarity(Rarity.RARE)))
+					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
+
+			HELIOS_SCEPTER = REGISTRATE.item("scepter_of_helios", p ->
+							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.EPIC)))
+					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
+
+			BOREAS_CEEPTER = REGISTRATE.item("scepter_of_boreas", p ->
 							new WinterStormWand(p.durability(128).fireResistant().rarity(Rarity.RARE)))
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 		}

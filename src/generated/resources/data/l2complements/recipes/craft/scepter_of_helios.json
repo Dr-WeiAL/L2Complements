@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "l2complements:sun_membrane"
+  },
+  "base": {
+    "item": "l2complements:hellfire_wand"
+  },
+  "result": {
+    "item": "l2complements:scepter_of_helios"
+  },
+  "template": {
+    "item": "l2complements:flame_upgrade_smithing_template"
+  }
+}

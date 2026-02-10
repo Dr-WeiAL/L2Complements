@@ -1,21 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "A": {
-      "item": "l2complements:eternium_ingot"
-    },
-    "B": {
-      "item": "l2complements:explosion_shard"
-    }
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "l2complements:eternium_ingot"
   },
-  "pattern": [
-    "AA",
-    "AB",
-    " B"
-  ],
+  "base": {
+    "item": "minecraft:iron_axe"
+  },
   "result": {
     "item": "l2complements:eternium_axe"
   },
-  "show_notification": true
+  "template": {
+    "item": "l2complements:eternal_upgrade_smithing_template"
+  }
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_heirophant_green": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "l2complements:heirophant_green"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "l2complements:craft/scepter_of_boreas"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_heirophant_green",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "l2complements:craft/scepter_of_boreas"
+    ]
+  },
+  "sends_telemetry_event": false
+}

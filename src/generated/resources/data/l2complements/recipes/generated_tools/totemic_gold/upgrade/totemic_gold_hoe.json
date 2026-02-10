@@ -20,6 +20,6 @@
     "item": "l2complements:totemic_gold_hoe"
   },
   "template": {
-    "tag": "l2library:dummy_smithing_template"
+    "item": "l2complements:material_swap_smithing_template"
   }
 }

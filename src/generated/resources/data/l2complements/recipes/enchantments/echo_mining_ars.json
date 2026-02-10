@@ -25,8 +25,13 @@
     {
       "item": {
         "type": "l2library:enchantment",
-        "enchantment": "minecraft:efficiency",
+        "enchantment": "l2complements:vien_mining",
         "min_level": 1
+      }
+    },
+    {
+      "item": {
+        "item": "l2complements:resonant_feather"
       }
     },
     {
@@ -52,11 +57,6 @@
     {
       "item": {
         "item": "minecraft:echo_shard"
-      }
-    },
-    {
-      "item": {
-        "item": "minecraft:iron_pickaxe"
       }
     },
     {

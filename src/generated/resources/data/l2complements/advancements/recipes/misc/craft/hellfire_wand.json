@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sun_membrane": {
+    "has_soul_flame": {
       "conditions": {
         "items": [
           {
             "items": [
-              "l2complements:sun_membrane"
+              "l2complements:soul_flame"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_sun_membrane",
+      "has_soul_flame",
       "has_the_recipe"
     ]
   ],

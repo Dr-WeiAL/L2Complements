@@ -9,6 +9,12 @@
     {
       "amount": 1,
       "ingredient": {
+        "item": "l2complements:resonant_feather"
+      }
+    },
+    {
+      "amount": 1,
+      "ingredient": {
         "item": "l2complements:storm_core"
       }
     },
@@ -25,12 +31,6 @@
       }
     },
     {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:iron_pickaxe"
-      }
-    },
-    {
       "amount": 2,
       "ingredient": {
         "item": "minecraft:sculk_sensor"
@@ -39,7 +39,7 @@
   ],
   "main_ingredient": {
     "type": "l2library:enchantment",
-    "enchantment": "minecraft:efficiency",
+    "enchantment": "l2complements:vien_mining",
     "min_level": 1
   },
   "result": {

@@ -23,12 +23,12 @@
     }
   ],
   "criteria": {
-    "has_storm_core": {
+    "has_resonant_feather": {
       "conditions": {
         "items": [
           {
             "items": [
-              "l2complements:storm_core"
+              "l2complements:resonant_feather"
             ]
           }
         ]
@@ -44,7 +44,7 @@
   },
   "requirements": [
     [
-      "has_storm_core",
+      "has_resonant_feather",
       "has_the_recipe"
     ]
   ],
