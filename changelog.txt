@@ -5,6 +5,10 @@
 - Make warp stone cheaper, echo mining more expensive
 - Add cool down for sonic shooter
 - Make eternium cheaper
+- Boost durability of some tools
+- Fix sonic shooter sound
+- Fix fire wand particle rendering at long distance
+- copy vanilla wither renderer into separate code to prevent mixins breaking force field rendering
 
 2.5.10
 - Add progress display on wind bottle in process of wind essence

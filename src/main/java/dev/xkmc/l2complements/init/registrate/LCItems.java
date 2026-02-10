@@ -207,11 +207,11 @@ public class LCItems {
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
 			HELLFIRE_WAND = REGISTRATE.item("hellfire_wand", p ->
-							new HellfireWand(p.durability(64).fireResistant().rarity(Rarity.RARE)))
+							new HellfireWand(p.durability(256).fireResistant().rarity(Rarity.RARE)))
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
 			WINTERSTORM_WAND = REGISTRATE.item("winterstorm_wand", p ->
-							new WinterStormWand(p.durability(128).fireResistant().rarity(Rarity.RARE)))
+							new WinterStormWand(p.durability(256).fireResistant().rarity(Rarity.RARE)))
 					.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
 
 			HELIOS_SCEPTER = REGISTRATE.item("scepter_of_helios", p ->

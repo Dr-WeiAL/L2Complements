@@ -12,9 +12,4 @@ public record OreDigger(int r, int max) implements CraftableBreaker {
 		return max << (lv - 1);
 	}
 
-	@Override
-	public int getMaxLevel() {
-		return 3;
-	}
-
 }

@@ -59,6 +59,7 @@ public class HellfireWand extends WandItem {
 			Vec3 v0 = new Vec3(0, radius, 0);
 			v0 = v0.xRot(tpi / 4).yRot(level.getRandom().nextFloat() * tpi);
 			level.addAlwaysVisibleParticle(time > 60 && i <= 1 ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME,
+					true,
 					center.x + v0.x,
 					center.y + v0.y + 0.5f,
 					center.z + v0.z,
@@ -95,14 +96,14 @@ public class HellfireWand extends WandItem {
 				tip = tip.xRot((float) (Math.PI / 2)).yRot((float) (Math.PI * 4 / 5 * start));
 				Vec3 next = tip.yRot((float) (Math.PI * 4 / 5));
 				v0 = tip.add(next.subtract(tip).scale(perc / side - start));
-				level.addAlwaysVisibleParticle(ParticleTypes.SOUL,
+				level.addAlwaysVisibleParticle(ParticleTypes.SOUL, true,
 						center.x + v0.x,
 						center.y + v0.y + 0.5,
 						center.z + v0.z, 0, 1, 0);
 			} else {
 				v0 = new Vec3(0, radius, 0);
 				v0 = v0.xRot((float) (Math.PI / 2)).yRot((float) (perc - side * 5));
-				level.addAlwaysVisibleParticle(ParticleTypes.SOUL_FIRE_FLAME,
+				level.addAlwaysVisibleParticle(ParticleTypes.SOUL_FIRE_FLAME, true,
 						center.x + v0.x,
 						center.y + v0.y + 0.5,
 						center.z + v0.z, 0, 1, 0);
