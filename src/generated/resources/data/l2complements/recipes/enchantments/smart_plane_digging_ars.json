@@ -31,21 +31,6 @@
     },
     {
       "item": {
-        "item": "l2complements:storm_core"
-      }
-    },
-    {
-      "item": {
-        "item": "minecraft:golden_hoe"
-      }
-    },
-    {
-      "item": {
-        "item": "minecraft:golden_hoe"
-      }
-    },
-    {
-      "item": {
         "item": "minecraft:golden_hoe"
       }
     },
@@ -57,6 +42,21 @@
     {
       "item": {
         "item": "minecraft:lapis_lazuli"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:lapis_lazuli"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:redstone"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:redstone"
       }
     },
     {

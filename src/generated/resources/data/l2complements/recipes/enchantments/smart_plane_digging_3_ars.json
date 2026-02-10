@@ -1,0 +1,74 @@
+{
+  "type": "ars_nouveau:enchantment",
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ars_nouveau"
+        },
+        {
+          "type": "l2library:boolean_config",
+          "expected": true,
+          "line": [
+            "useArsNouveauForEnchantmentRecipe"
+          ],
+          "path": "l2_configs/l2complements-common.toml"
+        }
+      ]
+    }
+  ],
+  "enchantment": "l2complements:smart_plane_digging",
+  "level": 3,
+  "pedestalItems": [
+    {
+      "item": {
+        "type": "l2library:enchantment",
+        "enchantment": "l2complements:plane_digging",
+        "min_level": 3
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:redstone"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:redstone"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:redstone"
+      }
+    },
+    {
+      "item": {
+        "item": "minecraft:redstone"
+      }
+    }
+  ],
+  "sourceCost": 2000
+}

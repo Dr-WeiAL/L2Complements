@@ -7,19 +7,13 @@
   },
   "inputs": [
     {
-      "amount": 1,
-      "ingredient": {
-        "item": "l2complements:storm_core"
-      }
-    },
-    {
       "amount": 2,
       "ingredient": {
         "item": "minecraft:iron_ingot"
       }
     },
     {
-      "amount": 2,
+      "amount": 3,
       "ingredient": {
         "item": "minecraft:lapis_lazuli"
       }

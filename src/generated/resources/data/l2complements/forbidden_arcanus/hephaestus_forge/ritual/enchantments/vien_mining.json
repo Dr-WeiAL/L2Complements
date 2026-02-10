@@ -7,39 +7,21 @@
   },
   "inputs": [
     {
-      "amount": 1,
-      "ingredient": {
-        "item": "l2complements:storm_core"
-      }
-    },
-    {
-      "amount": 2,
-      "ingredient": {
-        "item": "minecraft:gold_ingot"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:iron_pickaxe"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:iron_pickaxe"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:iron_pickaxe"
-      }
-    },
-    {
       "amount": 2,
       "ingredient": {
         "item": "minecraft:lapis_lazuli"
+      }
+    },
+    {
+      "amount": 2,
+      "ingredient": {
+        "item": "minecraft:redstone"
+      }
+    },
+    {
+      "amount": 1,
+      "ingredient": {
+        "item": "minecraft:stone_pickaxe"
       }
     }
   ],

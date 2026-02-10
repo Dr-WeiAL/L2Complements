@@ -53,7 +53,7 @@ public class MaterialDamageListener implements AttackListener {
 		LivingDamageEvent event = cache.getLivingDamageEvent();
 		if (event == null) return;
 		if (cache.getAttackTarget() instanceof Player player) {
-			float damage = cache.getPreDamage();
+			float damage = Math.max(cache.getPreDamageOriginal(), cache.getPreDamage());
 			if (event.getSource().is(DamageTypeTags.IS_EXPLOSION) && damage >= LCConfig.COMMON.explosionDamage.get()) {
 				if (cache.getDamageDealt() < player.getHealth() + player.getAbsorptionAmount()) {
 					player.getInventory().placeItemBackInInventory(LCItems.EXPLOSION_SHARD.asStack());

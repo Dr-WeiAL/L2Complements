@@ -51,7 +51,7 @@ public class L2Complements {
 
 	public static final String MODID = "l2complements";
 	public static final PacketHandlerWithConfig HANDLER = new PacketHandlerWithConfig(
-			new ResourceLocation(MODID, "main"), 4,
+			new ResourceLocation(MODID, "main"), 5,
 			e -> e.create(EmptyRightClickToServer.class, PLAY_TO_SERVER),
 			e -> e.create(RotateDiggerToServer.class, PLAY_TO_SERVER),
 			e -> e.create(WandEffectToClient.class, PLAY_TO_CLIENT),

@@ -31,9 +31,6 @@
     "B": {
       "item": "minecraft:golden_hoe"
     },
-    "C": {
-      "item": "l2complements:storm_core"
-    },
     "D": {
       "item": "minecraft:lapis_lazuli"
     },
@@ -42,9 +39,9 @@
     }
   },
   "pattern": [
-    "ECE",
+    "EDE",
     "DAD",
-    "BBB"
+    "EBE"
   ],
   "result": {
     "item": "minecraft:enchanted_book",

@@ -9,35 +9,11 @@
     {
       "amount": 1,
       "ingredient": {
-        "item": "l2complements:storm_core"
-      }
-    },
-    {
-      "amount": 2,
-      "ingredient": {
-        "item": "minecraft:gold_ingot"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
         "item": "minecraft:iron_axe"
       }
     },
     {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:iron_axe"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:iron_axe"
-      }
-    },
-    {
-      "amount": 2,
+      "amount": 3,
       "ingredient": {
         "item": "minecraft:lapis_lazuli"
       }

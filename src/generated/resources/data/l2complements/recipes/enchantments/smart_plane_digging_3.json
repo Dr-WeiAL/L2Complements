@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:and",
+        "values": [
+          {
+            "type": "forge:mod_loaded",
+            "modid": "ars_nouveau"
+          },
+          {
+            "type": "l2library:boolean_config",
+            "expected": true,
+            "line": [
+              "useArsNouveauForEnchantmentRecipe"
+            ],
+            "path": "l2_configs/l2complements-common.toml"
+          }
+        ]
+      }
+    }
+  ],
+  "key": {
+    "A": {
+      "type": "l2library:enchantment",
+      "enchantment": "l2complements:plane_digging",
+      "min_level": 3
+    },
+    "B": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "EBE",
+    "BAB",
+    "EBE"
+  ],
+  "result": {
+    "item": "minecraft:enchanted_book",
+    "nbt": {
+      "StoredEnchantments": [
+        {
+          "id": "l2complements:smart_plane_digging",
+          "lvl": 3
+        }
+      ]
+    }
+  }
+}

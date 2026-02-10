@@ -1,6 +1,6 @@
 package dev.xkmc.l2complements.content.enchantment.digging;
 
-public record PlaneBlockBreaker(int radius) implements SimpleNumberDesc {
+public record PlaneBlockBreaker(int radius) implements CraftableBreaker {
 
 	@Override
 	public BlockBreakerInstance getInstance(DiggerContext ctx) {
@@ -16,8 +16,4 @@ public record PlaneBlockBreaker(int radius) implements SimpleNumberDesc {
 		return (radius + lv - 1) * 2 + 1;
 	}
 
-	@Override
-	public int getMaxLevel() {
-		return 3;
-	}
 }

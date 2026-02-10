@@ -31,9 +31,6 @@
     "B": {
       "item": "minecraft:stone_pickaxe"
     },
-    "C": {
-      "item": "l2complements:storm_core"
-    },
     "D": {
       "item": "minecraft:lapis_lazuli"
     },
@@ -42,7 +39,7 @@
     }
   },
   "pattern": [
-    "ECE",
+    "EDE",
     "BAB",
     "DBD"
   ],

@@ -23,12 +23,12 @@
     }
   ],
   "criteria": {
-    "has_storm_core": {
+    "has_lapis_lazuli": {
       "conditions": {
         "items": [
           {
             "items": [
-              "l2complements:storm_core"
+              "minecraft:lapis_lazuli"
             ]
           }
         ]
@@ -44,7 +44,7 @@
   },
   "requirements": [
     [
-      "has_storm_core",
+      "has_lapis_lazuli",
       "has_the_recipe"
     ]
   ],

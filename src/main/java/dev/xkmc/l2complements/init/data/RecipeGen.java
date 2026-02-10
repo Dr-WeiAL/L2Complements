@@ -608,50 +608,121 @@ public class RecipeGen {
 			// digging
 			{
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.CUBIC.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
-						.pattern("ECE").pattern("BAB").pattern("DBD")
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.CUBIC.get(), 1)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EDE").pattern("BAB").pattern("DBD")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
 						.define('B', Items.STONE_PICKAXE)
-						.define('C', LCItems.STORM_CORE.get())
 						.define('D', Items.LAPIS_LAZULI)
 						.define('E', Items.IRON_INGOT)
 						.save(pvd, getID(LCEnchantments.CUBIC.get()));
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.PLANE.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
-						.pattern("ECE").pattern("DAD").pattern("BBB")
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.CUBIC.get(), 2)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EDE").pattern(" A ").pattern("DBD")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 2))
+						.define('B', Items.IRON_PICKAXE)
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.IRON_INGOT)
+						.save(pvd, getID(LCEnchantments.CUBIC.get(), "_2"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.CUBIC.get(), 3)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern(" D ").pattern("DAD").pattern(" B ")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 3))
+						.define('B', Items.DIAMOND_PICKAXE)
+						.define('D', Items.LAPIS_LAZULI)
+						.save(pvd, getID(LCEnchantments.CUBIC.get(), "_3"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.PLANE.get(), 1)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EDE").pattern("DAD").pattern("BBB")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
 						.define('B', Items.STONE_HOE)
-						.define('C', LCItems.STORM_CORE.get())
 						.define('D', Items.LAPIS_LAZULI)
 						.define('E', Items.IRON_INGOT)
 						.save(pvd, getID(LCEnchantments.PLANE.get()));
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.SMART_PLANE.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
-						.pattern("ECE").pattern("DAD").pattern("BBB")
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.PLANE.get(), 2)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern(" D ").pattern("DAD").pattern("EBE")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 2))
+						.define('B', Items.IRON_HOE)
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.IRON_INGOT)
+						.save(pvd, getID(LCEnchantments.PLANE.get(), "_2"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.PLANE.get(), 3)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern(" D ").pattern("DAD").pattern(" B ")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 3))
+						.define('B', Items.DIAMOND_HOE)
+						.define('D', Items.LAPIS_LAZULI)
+						.save(pvd, getID(LCEnchantments.PLANE.get(), "_3"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.SMART_PLANE.get(), 1)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EDE").pattern("DAD").pattern("EBE")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
 						.define('B', Items.GOLDEN_HOE)
-						.define('C', LCItems.STORM_CORE.get())
 						.define('D', Items.LAPIS_LAZULI)
 						.define('E', Items.REDSTONE)
 						.save(pvd, getID(LCEnchantments.SMART_PLANE.get()));
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.DRILL.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
-						.pattern("ECB").pattern("DAB").pattern("EDB")
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.SMART_PLANE.get(), 2)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EBE").pattern("BAB").pattern("EBE")
+						.define('A', new EnchantmentIngredient(LCEnchantments.PLANE.get(), 2))
+						.define('B', Items.GOLD_INGOT)
+						.define('E', Items.REDSTONE)
+						.save(pvd, getID(LCEnchantments.SMART_PLANE.get(), "_2"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.SMART_PLANE.get(), 3)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EBE").pattern("BAB").pattern("EBE")
+						.define('A', new EnchantmentIngredient(LCEnchantments.PLANE.get(), 3))
+						.define('B', Items.GOLD_INGOT)
+						.define('E', Items.REDSTONE)
+						.save(pvd, getID(LCEnchantments.SMART_PLANE.get(), "_3"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.DRILL.get(), 1)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("EDB").pattern("DAB").pattern("EDB")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
 						.define('B', Items.STONE_SHOVEL)
-						.define('C', LCItems.STORM_CORE.get())
 						.define('D', Items.LAPIS_LAZULI)
 						.define('E', Items.IRON_INGOT)
 						.save(pvd, getID(LCEnchantments.DRILL.get()));
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.VIEN.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
-						.pattern("ECE").pattern("BAB").pattern("DBD")
-						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
-						.define('B', Items.IRON_PICKAXE)
-						.define('C', LCItems.STORM_CORE.get())
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.DRILL.get(), 2)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern(" DE").pattern("DAB").pattern(" DE")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 2))
+						.define('B', Items.IRON_SHOVEL)
 						.define('D', Items.LAPIS_LAZULI)
-						.define('E', Items.GOLD_INGOT)
+						.define('E', Items.IRON_INGOT)
+						.save(pvd, getID(LCEnchantments.DRILL.get(), "_2"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.DRILL.get(), 3)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern(" D ").pattern("EAB").pattern(" D ")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 3))
+						.define('B', Items.DIAMOND_SHOVEL)
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.IRON_INGOT)
+						.save(pvd, getID(LCEnchantments.DRILL.get(), "_3"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.VIEN.get(), 1)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("E E").pattern(" A ").pattern("DBD")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
+						.define('B', Items.STONE_PICKAXE)
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.REDSTONE)
 						.save(pvd, getID(LCEnchantments.VIEN.get()));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.VIEN.get(), 2)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("E E").pattern(" A ").pattern("DBD")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 2))
+						.define('B', Items.IRON_PICKAXE)
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.REDSTONE)
+						.save(pvd, getID(LCEnchantments.VIEN.get(), "_2"));
+
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.VIEN.get(), 3)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern("E E").pattern(" A ").pattern("DBD")
+						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 3))
+						.define('B', Items.DIAMOND_PICKAXE)
+						.define('D', Items.LAPIS_LAZULI)
+						.define('E', Items.REDSTONE)
+						.save(pvd, getID(LCEnchantments.VIEN.get(), "_3"));
 
 				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.ECHO.get(), 1)::unlockedBy, LCItems.RESONANT_FEATHER.get())
 						.pattern("ECE").pattern("FAF").pattern("DBD")
@@ -664,13 +735,11 @@ public class RecipeGen {
 						.save(pvd, getID(LCEnchantments.ECHO.get()));
 
 
-				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.TREE.get(), 1)::unlockedBy, LCItems.STORM_CORE.get())
-						.pattern("ECE").pattern("BAB").pattern("DBD")
+				unlock(pvd, new EnchantmentRecipeBuilder(LCEnchantments.TREE.get(), 1)::unlockedBy, Items.LAPIS_LAZULI)
+						.pattern(" D ").pattern(" A ").pattern("DBD")
 						.define('A', new EnchantmentIngredient(Enchantments.BLOCK_EFFICIENCY, 1))
 						.define('B', Items.IRON_AXE)
-						.define('C', LCItems.STORM_CORE.get())
 						.define('D', Items.LAPIS_LAZULI)
-						.define('E', Items.GOLD_INGOT)
 						.save(pvd, getID(LCEnchantments.TREE.get()));
 
 
@@ -1146,7 +1215,7 @@ public class RecipeGen {
 	}
 
 	@Deprecated
-	public static void swapSmithing(RegistrateRecipeProvider pvd, TagKey<Item> in, Item mat, Item out) {
+	public static void smithing(RegistrateRecipeProvider pvd, TagKey<Item> in, Item mat, Item out) {
 		swapSmithing(pvd, in, mat, out, pvd);
 	}
 

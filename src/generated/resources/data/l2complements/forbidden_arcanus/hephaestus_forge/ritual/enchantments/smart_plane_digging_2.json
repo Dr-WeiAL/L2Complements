@@ -1,0 +1,42 @@
+{
+  "essences": {
+    "aureal": 1100,
+    "blood": 2300,
+    "experience": 10,
+    "souls": 2
+  },
+  "inputs": [
+    {
+      "amount": 4,
+      "ingredient": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    {
+      "amount": 4,
+      "ingredient": {
+        "item": "minecraft:redstone"
+      }
+    }
+  ],
+  "main_ingredient": {
+    "type": "l2library:enchantment",
+    "enchantment": "l2complements:plane_digging",
+    "min_level": 2
+  },
+  "result": {
+    "type": "forbidden_arcanus:create_item",
+    "result_item": {
+      "Count": 1,
+      "id": "minecraft:enchanted_book",
+      "tag": {
+        "StoredEnchantments": [
+          {
+            "id": "l2complements:smart_plane_digging",
+            "lvl": 2
+          }
+        ]
+      }
+    }
+  }
+}

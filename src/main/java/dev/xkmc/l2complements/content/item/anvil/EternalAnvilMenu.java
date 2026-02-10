@@ -7,6 +7,7 @@ import net.minecraft.world.inventory.AnvilMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.ForgeHooks;
 
 public class EternalAnvilMenu extends AnvilMenu {
 
@@ -32,20 +33,21 @@ public class EternalAnvilMenu extends AnvilMenu {
 	}
 
 	protected void onTake(Player pl, ItemStack stack) {
-		this.inputSlots.setItem(0, ItemStack.EMPTY);
-		if (this.repairItemCountCost > 0) {
-			ItemStack mat = this.inputSlots.getItem(1);
-			if (!mat.isEmpty() && mat.getCount() > this.repairItemCountCost) {
-				mat.shrink(this.repairItemCountCost);
-				this.inputSlots.setItem(1, mat);
+		inputSlots.setItem(0, ItemStack.EMPTY);
+		ForgeHooks.onAnvilRepair(pl, stack, inputSlots.getItem(0), inputSlots.getItem(1));
+		if (repairItemCountCost > 0) {
+			ItemStack mat = inputSlots.getItem(1);
+			if (!mat.isEmpty() && mat.getCount() > repairItemCountCost) {
+				mat.shrink(repairItemCountCost);
+				inputSlots.setItem(1, mat);
 			} else {
-				this.inputSlots.setItem(1, ItemStack.EMPTY);
+				inputSlots.setItem(1, ItemStack.EMPTY);
 			}
 		} else {
-			this.inputSlots.setItem(1, ItemStack.EMPTY);
+			inputSlots.setItem(1, ItemStack.EMPTY);
 		}
 		setMaximumCost(0);
-		this.access.execute((level, pos) -> level.levelEvent(1030, pos, 0));
+		access.execute((level, pos) -> level.levelEvent(1030, pos, 0));
 	}
 
 	@Override
@@ -56,11 +58,11 @@ public class EternalAnvilMenu extends AnvilMenu {
 	@Override
 	public void createResult() {
 		super.createResult();
-		var stack = this.resultSlots.getItem(0);
+		var stack = resultSlots.getItem(0);
 		if (stack.getBaseRepairCost() > 0) {
 			stack.setRepairCost(0);
-			this.resultSlots.setItem(0, stack);
-			this.broadcastChanges();
+			resultSlots.setItem(0, stack);
+			broadcastChanges();
 		}
 	}
 

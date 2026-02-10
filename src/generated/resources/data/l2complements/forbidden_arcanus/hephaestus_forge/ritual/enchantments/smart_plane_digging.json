@@ -9,35 +9,17 @@
     {
       "amount": 1,
       "ingredient": {
-        "item": "l2complements:storm_core"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
         "item": "minecraft:golden_hoe"
       }
     },
     {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:golden_hoe"
-      }
-    },
-    {
-      "amount": 1,
-      "ingredient": {
-        "item": "minecraft:golden_hoe"
-      }
-    },
-    {
-      "amount": 2,
+      "amount": 3,
       "ingredient": {
         "item": "minecraft:lapis_lazuli"
       }
     },
     {
-      "amount": 2,
+      "amount": 4,
       "ingredient": {
         "item": "minecraft:redstone"
       }

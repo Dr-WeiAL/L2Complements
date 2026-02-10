@@ -138,4 +138,10 @@ public class RangeDiggingEnchantment extends UnobtainableEnchantment implements 
 	public int getDecoColor(String s) {
 		return 0xffafafaf;
 	}
+
+	@Override
+	public Set<Integer> getCraftableLevels() {
+		return breaker.getCraftableLevels();
+	}
+
 }
